@@ -13,10 +13,10 @@ import Contact from '../../pages/ContactUs';
 import FindYourStay from '../../pages/FindYourStay';
 import logo from '../../images/dark_logo.svg'
 
-function CenteredNavbar() {
+function CenteredNavbar(props) {
   return (
     <Router>
-      <Navbar bg="light" expand="lg" className='d-flex'>
+      <Navbar bg="light" expand="lg" className={(props.theme === "light" ? "theme-light" : "theme-dark") + " d-flex"}>
         <Container>
           <Navbar.Brand href="/">            
               <img

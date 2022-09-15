@@ -1,4 +1,4 @@
-import Heading from "../components/layout/Heading";
+import Heading from "../components/ui/Heading";
 
 export default function Contact() {
     return <Heading title="Contact us" />;

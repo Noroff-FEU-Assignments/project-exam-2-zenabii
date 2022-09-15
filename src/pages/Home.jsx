@@ -1,5 +1,10 @@
-import Heading from "../components/layout/Heading";
+import Heading from "../components/ui/Heading";
+import {HeroBanner} from "../components/ui/HeroBanner";
 
 export default function Home() {
-    return <Heading title="Home" />;
+    return (
+      <>
+      <HeroBanner />
+      </>
+      );
   }

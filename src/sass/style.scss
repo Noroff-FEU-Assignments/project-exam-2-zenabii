@@ -4,3 +4,25 @@
 .svg_logo {
     width: 100px;
 }
+
+.top-img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+  }
+
+  .hero-text-column {
+    z-index: 1;
+  }
+
+.absolute {
+    display: -ms-grid;
+    display: grid;
+    position: absolute;
+    padding-left: 10px;
+}
+
+.absolute {
+    top: 40%;
+    right: 30%;
+}
