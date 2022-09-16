@@ -12,7 +12,6 @@ export const HeroBanner = () => {
 
                 if (response.ok) {
                     const json = await response.json();
-                    console.log(json);
                     setBannerUrl(json);
                 } else {
                     setErrorMessage("kekw");
@@ -33,7 +32,7 @@ export const HeroBanner = () => {
     }
     return (
         <section className="hero-banner">
-            <img src={bannerUrl.data.attributes.Image.data.attributes.url} class="top-img" alt={bannerUrl.data.attributes.Image.data.attributes.alternativeText}/>
+            <img src={bannerUrl.data.attributes.Image.data.attributes.url} className="top-img" alt={bannerUrl.data.attributes.Image.data.attributes.alternativeText}/>
             <div className="hero-text-column absolute">
             <p className="no-margin">Explore the best parts of Iceland through</p> 
             <h1 className="reduced-line-height">Holi<span className="font-weight">daze</span></h1>
