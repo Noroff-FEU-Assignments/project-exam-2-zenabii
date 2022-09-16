@@ -1,0 +1,33 @@
+html, 
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 0;
+}
+
+.navbar-brand {
+    display: grid;
+}
+
+.display-grid {
+    display: grid;
+    align-items: center;
+    z-index: 1;
+}
+
+.navbar-alignment {
+    margin-bottom: -80px;
+    padding: 10px 50px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    color: $contrast-dark-700;
+}
+
+.z-index {
+    z-index: 1;
+}

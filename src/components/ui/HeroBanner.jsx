@@ -35,8 +35,8 @@ export const HeroBanner = () => {
         <section className="hero-banner">
             <img src={bannerUrl.data.attributes.Image.data.attributes.url} class="top-img" alt={bannerUrl.data.attributes.Image.data.attributes.alternativeText}/>
             <div className="hero-text-column absolute">
-            <span>Explore the best parts of Iceland through</span> 
-            <h1>Holidaze</h1>
+            <p className="no-margin">Explore the best parts of Iceland through</p> 
+            <h1 className="reduced-line-height">Holi<span className="font-weight">daze</span></h1>
             </div>
         </section>   
     )
