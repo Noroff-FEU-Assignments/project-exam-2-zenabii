@@ -2,8 +2,8 @@
 @import "foundations/colors";
 @import "foundations/typography";
 @import "partials/textComponents";
+@import "partials/ui";
 @import "partials/custom";
-
 
 .svg_logo {
     width: 100px;
@@ -13,11 +13,11 @@
     width: 100%;
     height: 800px;
     object-fit: cover;
-  }
+}
 
-  .hero-text-column {
+.hero-text-column {
     z-index: 1;
-  }
+}
 
 .absolute {
     display: grid;
@@ -25,7 +25,6 @@
     right: 10%;
     top: 40%;
 }
-
 
 .hero-banner {
     position: relative;

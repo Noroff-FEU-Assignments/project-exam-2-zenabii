@@ -14,7 +14,7 @@ export const TextIllustrated = () => (
             </p>
         </div>
         <div className="illustraton-part">
-            <img src={image} alt="illustration" className="illustration"></img>
+            <img src={image} alt="illustration" className="illustration" />
         </div>
     </section>
 );

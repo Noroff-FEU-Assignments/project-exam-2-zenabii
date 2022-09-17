@@ -1,0 +1,25 @@
+.arrowButton {
+    box-sizing: border-box;
+    position: absolute;
+    width: 48px;
+    height: 32px;
+    left: 458px;
+    top: 2334px;
+
+    border: 1px solid $solid-blue-700;
+    border-radius: 999px;
+}
+
+.iconWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 10px;
+    top: calc(50% - 16px / 2);
+}
