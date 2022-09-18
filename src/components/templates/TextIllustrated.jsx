@@ -14,7 +14,7 @@ export const TextIllustrated = () => (
             potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et
             orci."
         />
-        <div className="illustraton-part">
+        <div className="illustraton-part-right">
             <img src={image} alt="illustration" className="illustration" />
         </div>
     </section>

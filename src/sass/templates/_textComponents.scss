@@ -36,7 +36,12 @@
     width: 500px;
 }
 
-.illustraton-part {
+.illustraton-part-right {
     display: flex;
     flex-direction: row-reverse;
+}
+
+.illustraton-part-left {
+    display: flex;
+    flex-direction: row;
 }
