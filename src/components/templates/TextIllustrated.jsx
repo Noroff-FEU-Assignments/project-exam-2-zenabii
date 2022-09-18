@@ -1,4 +1,4 @@
-const image = require("../../../images/green-nature-old-house.jpg");
+const image = require("../../images/green-nature-old-house.jpg");
 
 export const TextIllustrated = () => (
     <section className="two-columns-grid">

@@ -1,0 +1,16 @@
+.cardIllustration {
+    width: 100%;
+}
+
+.cardBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0px;
+}
+
+.card {
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid $solid-blue-700;
+}

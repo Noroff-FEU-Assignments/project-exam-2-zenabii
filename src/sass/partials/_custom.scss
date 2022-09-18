@@ -31,17 +31,3 @@ body {
 .z-index {
     z-index: 1;
 }
-
-.card {
-    --bs-card-border-color: none;
-    --bs-card-border-radius: none;
-    --bs-card-inner-border-radius: none;
-}
-
-.card-group {
-    margin-bottom: 80px;
-}
-
-.border-bottom {
-    border-bottom: 1px solid $solid-blue-700 !important;
-}

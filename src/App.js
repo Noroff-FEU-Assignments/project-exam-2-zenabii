@@ -1,8 +1,8 @@
-import './sass/style.scss';
-import CenteredNavbar from './components/ui/Navbar';
+import "./sass/style.scss";
+import CenteredNavbar from "./components/organisms/Navbar";
 
 function App() {
-  return <CenteredNavbar theme="light" />;
+    return <CenteredNavbar theme="light" />;
 }
 
 export default App;
