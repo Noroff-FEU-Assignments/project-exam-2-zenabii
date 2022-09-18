@@ -1,7 +1,7 @@
 import { HeroBanner } from "../components/organisms/HeroBanner";
 import { TextIllustrated } from "../components/templates/TextIllustrated";
 import { CardGroup } from "../components/templates/CardGroup";
-import { Button } from "../components/atoms/Button";
+import { CtaBanner } from "../components/templates/CtaBanner";
 
 export default function Home() {
     return (
@@ -9,7 +9,7 @@ export default function Home() {
             <HeroBanner />
             <TextIllustrated />
             <CardGroup />
-            <Button link="#" text="press button" theme="black" />
+            <CtaBanner />
         </>
     );
 }

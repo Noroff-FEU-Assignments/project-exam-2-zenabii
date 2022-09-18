@@ -1,11 +1,9 @@
 import { Card } from "../organisms/Card";
+import { TitleText } from "../atoms/TitleText";
 
 export const CardGroup = () => (
     <section className="CardGroupComponent">
-        <div className="text-part">
-            <p className="subject">Booking</p>
-            <h2>Plan your stay</h2>
-        </div>
+        <TitleText subject="Booking" title="Plan your stay" />
         <div className="cardGroup">
             <Card />
             <Card />
