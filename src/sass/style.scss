@@ -1,11 +1,12 @@
 @import "~bootstrap/scss/bootstrap";
 @import "foundations/colors";
 @import "foundations/typography";
-@import "partials/textComponents";
-@import "partials/cardGroup";
-@import "partials/card";
-@import "partials/ui";
-@import "partials/custom";
+@import "templates/textComponents";
+@import "templates/cardGroup";
+@import "organisms/card";
+@import "atoms/arrowButton";
+@import "foundations/custom";
+@import "atoms/button";
 
 .svg_logo {
     width: 100px;

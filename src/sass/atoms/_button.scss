@@ -1,0 +1,44 @@
+.theme-black {
+    box-sizing: border-box;
+    height: 48px;
+    width: fit-content;
+    border: 1px solid $solid-blue-700;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.theme-black p {
+        color: $solid-blue-700;
+    }
+}
+
+.buttonWidth {
+    margin-bottom: 0px;
+    padding: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.buttonIcon {
+    align-items: center;
+    width: 16px;
+    margin: 0px 16px;
+}
+
+.theme-white {
+    box-sizing: border-box;
+    height: 48px;
+    width: fit-content;
+    border: 1px solid $solid-white;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.theme-white > p {
+        color: $solid-white;
+    }
+}
