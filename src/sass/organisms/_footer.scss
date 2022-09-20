@@ -1,0 +1,28 @@
+.footerTitle {
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-weight: 500;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.footerLogo {
+    width: 50%;
+    margin-bottom: 48px;
+}
+
+footer {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 96px;
+    border-top: 1px solid $contrast-dark-700;
+    padding-top: 64px;
+    margin-bottom: 32px;
+}
+
+.copyright {
+    border-top: 1px solid $contrast-dark-700;
+}
