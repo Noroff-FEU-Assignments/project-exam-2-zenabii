@@ -1,0 +1,17 @@
+.activityBannerPosition {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 40%;
+    padding-bottom: 64px;
+}
+
+.activityBanner {
+    position: relative;
+}
+
+.activityBannerImg {
+    width: 100%;
+    object-fit: cover;
+    height: 800px;
+}

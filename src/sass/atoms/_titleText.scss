@@ -1,0 +1,23 @@
+.text-part-blue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &.text-part-blue > p {
+        color: $solid-blue-700;
+    }
+
+    &.text-part-blue > h2 {
+        color: $solid-blue-700;
+    }
+}
+
+.text-part-white {
+    &.text-part-white > p {
+        color: $solid-white;
+    }
+
+    &.text-part-white > h2 {
+        color: $solid-white;
+    }
+}

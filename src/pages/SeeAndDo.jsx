@@ -1,5 +1,11 @@
-import Heading from "../components/molecules/Heading";
+import { Footer } from "../components/organisms/Footer";
+import { ActivityBanner } from "../components/organisms/ActivityBanner";
 
 export default function SeeAndDo() {
-    return <Heading title="See & Do" />;
+    return (
+        <>
+            <ActivityBanner />
+            <Footer />
+        </>
+    );
 }

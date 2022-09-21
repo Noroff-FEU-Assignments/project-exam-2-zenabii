@@ -1,0 +1,27 @@
+.text-title-blue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &.text-title-blue > p {
+        color: $solid-blue-700;
+    }
+
+    &.text-title-blue > h1 {
+        color: $solid-blue-700;
+        font-size: 4rem;
+        text-transform: none;
+    }
+}
+
+.text-title-white {
+    &.text-title-white > p {
+        color: $solid-white;
+    }
+
+    &.text-title-white > h1 {
+        color: $solid-white;
+        font-size: 4rem;
+        text-transform: none;
+    }
+}

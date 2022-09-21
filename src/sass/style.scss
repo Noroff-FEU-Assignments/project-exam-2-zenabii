@@ -6,9 +6,12 @@
 @import "templates/ctaBanner";
 @import "organisms/card";
 @import "organisms/footer";
+@import "organisms/activityBanner";
 @import "atoms/arrowButton";
-@import "foundations/custom";
+@import "atoms/titleText";
 @import "atoms/button";
+@import "atoms/bannerText";
+@import "foundations/custom";
 
 .svg_logo {
     width: 100px;
