@@ -4,7 +4,6 @@
 @import "templates/textComponents";
 @import "templates/cardGroup";
 @import "templates/ctaBanner";
-@import "templates/activitySection";
 @import "organisms/card";
 @import "organisms/footer";
 @import "organisms/activityBanner";
@@ -12,6 +11,7 @@
 @import "atoms/titleText";
 @import "atoms/button";
 @import "atoms/bannerText";
+@import "molecules/fullWidthText";
 @import "foundations/custom";
 
 .svg_logo {
