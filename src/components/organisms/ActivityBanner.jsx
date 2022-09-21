@@ -1,4 +1,4 @@
-import { BannerText } from "../atoms/BannerText";
+import { BannerText } from "../molecules/BannerText";
 
 const image = require("../../images/atlantic-puin-nature-ocean.jpg");
 

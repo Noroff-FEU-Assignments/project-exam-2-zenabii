@@ -1,4 +1,4 @@
-import { TitleText } from "../atoms/TitleText";
+import { TitleText } from "../molecules/TitleText";
 import { Button } from "../atoms/Button";
 
 const image = require("../../images/white_house_ocean_nature.jpg");

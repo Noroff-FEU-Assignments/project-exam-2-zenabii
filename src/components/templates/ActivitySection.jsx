@@ -1,8 +1,8 @@
 import { TitleText } from "../molecules/TitleText";
 
-const image = require("../../images/green-nature-old-house.jpg");
+const image = require("../../images/atlantic-puffin-grass-green.jpg");
 
-export const TextIllustrated = () => (
+export const ActivitySection = () => (
     <section className="two-columns-grid">
         <TitleText
             theme="blue"

@@ -1,5 +1,5 @@
 import { Card } from "../organisms/Card";
-import { TitleText } from "../atoms/TitleText";
+import { TitleText } from "../molecules/TitleText";
 
 export const CardGroup = () => (
     <section className="CardGroupComponent">
