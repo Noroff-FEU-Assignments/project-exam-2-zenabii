@@ -1,0 +1,18 @@
+.background {
+    background-color: $contrast-dark-700;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 112px;
+}
+
+.quoteWidth {
+    width: 30%;
+}
+
+.margin-bottom {
+    margin-bottom: 32px;
+}

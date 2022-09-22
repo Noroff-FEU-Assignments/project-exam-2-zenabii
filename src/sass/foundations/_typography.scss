@@ -15,6 +15,14 @@ h4 {
     font-weight: 600;
 }
 
+.white-color {
+    color: $solid-white;
+}
+
+.fourRem {
+    font-size: 4rem;
+}
+
 p,
 a {
     font-family: "Roboto", sans-serif;
@@ -46,4 +54,8 @@ h2 {
 
 .subject {
     font-size: 12px;
+}
+
+.text-align-center {
+    text-align: center;
 }
