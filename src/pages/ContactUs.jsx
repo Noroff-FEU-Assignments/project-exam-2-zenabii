@@ -1,5 +1,18 @@
-import Heading from "../components/molecules/Heading";
+import { ContactFormWithText } from "../components/templates/ContactFormWithText";
+import { CardGroup } from "../components/templates/CardGroup";
+import { Footer } from "../components/organisms/Footer";
+import { FullWidthSection } from "../components/templates/FullWidthSection";
+
+const image = require("../images/winter-white-house-nature.jpg");
 
 export default function Contact() {
-    return <Heading title="Contact us" />;
+    return (
+        <>
+            <img src={image} alt="illustration" className="headerImg mb-5" />
+            <ContactFormWithText />
+            <CardGroup />
+            <FullWidthSection />
+            <Footer />
+        </>
+    );
 }

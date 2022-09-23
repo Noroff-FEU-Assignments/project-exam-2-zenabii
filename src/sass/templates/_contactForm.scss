@@ -1,0 +1,11 @@
+.formColumn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.displayGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+}
