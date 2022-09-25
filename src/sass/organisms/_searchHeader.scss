@@ -1,0 +1,23 @@
+.searchSection {
+    width: 600px;
+    margin-left: 15%;
+    margin-top: 200px;
+}
+
+.gradientBackground {
+    position: absolute;
+    right: 0;
+    height: 802px;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(0, 90, 102, 0.15) 0%,
+        rgba(217, 217, 217, 0) 71.08%
+    );
+}
+
+.absoluteMargin {
+    margin-top: 800px;
+}
