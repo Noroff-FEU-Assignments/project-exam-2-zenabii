@@ -9,6 +9,7 @@ import Contact from "../../pages/ContactUs";
 import FindYourStay from "../../pages/FindYourStay";
 import Login from "../../pages/Login";
 import Admin from "../../pages/Admin";
+import Hotel from "../../pages/Hotel";
 import logo from "../../images/dark_logo.svg";
 
 function CenteredNavbar(props) {
@@ -71,6 +72,7 @@ function CenteredNavbar(props) {
                     <Route path="/contactus" element={<Contact />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/admin" element={<Admin />} />
+                    <Route path="/hotel/:id" element={<Hotel />} />
                 </Routes>
             </main>
         </Router>

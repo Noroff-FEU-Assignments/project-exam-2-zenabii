@@ -1,12 +1,12 @@
 import { ArrowButton } from "../atoms/ArrowButton";
 const image = require("../../images/green-nature-old-house.jpg");
 
-export const Card = () => (
+export const Card = ({ img, title, link }) => (
     <div className="card">
-        <img src={image} alt="illustration" className="cardIllustration" />
+        <img src={img} alt="illustration" className="cardIllustration" />
         <div className="cardBody">
-            <h4>Hotel name</h4>
-            <ArrowButton link="#" />
+            <h4>{title}</h4>
+            <ArrowButton link={link} />
         </div>
     </div>
 );
