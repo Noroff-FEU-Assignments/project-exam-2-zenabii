@@ -5,6 +5,7 @@
 @import "templates/cardGroup";
 @import "templates/ctaBanner";
 @import "templates/contactForm";
+@import "templates/hotelContent";
 @import "organisms/card";
 @import "organisms/footer";
 @import "organisms/activityBanner";
@@ -17,9 +18,11 @@
 @import "atoms/titleText";
 @import "atoms/button";
 @import "atoms/quote";
+@import "atoms/amenities";
 @import "atoms/bannerText";
 @import "atoms/breadCrumb";
 @import "molecules/fullWidthText";
+@import "molecules/review";
 @import "foundations/custom";
 
 .svg_logo {

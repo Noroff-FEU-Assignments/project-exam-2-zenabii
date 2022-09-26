@@ -23,9 +23,18 @@ h4 {
     font-size: 4rem;
 }
 
+.threeRem {
+    font-size: 3rem;
+}
+
 p,
 a {
     font-family: "Roboto", sans-serif;
+}
+
+.amenitiesTitle {
+    font-weight: 500;
+    margin-bottom: 32px;
 }
 
 .no-margin {
@@ -58,4 +67,13 @@ h2 {
 
 .text-align-center {
     text-align: center;
+}
+
+.reviewRating {
+    font-weight: 500;
+    color: $contrast-green-700;
+}
+
+.reviewPlacement {
+    font-size: 12px;
 }

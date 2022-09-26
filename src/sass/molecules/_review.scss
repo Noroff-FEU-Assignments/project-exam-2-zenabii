@@ -1,0 +1,22 @@
+.reviewColumn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.reviewSection {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-right: 40px;
+}
+
+.scoreContainer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 24px;
+}
