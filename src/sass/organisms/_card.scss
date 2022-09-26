@@ -1,5 +1,7 @@
 .cardIllustration {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
 .cardBody {
@@ -13,4 +15,5 @@
     width: 95%;
     margin: 0 auto;
     border-bottom: 1px solid $solid-blue-700;
+    margin-bottom: 24px;
 }
