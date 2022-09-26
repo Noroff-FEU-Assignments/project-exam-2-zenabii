@@ -1,4 +1,6 @@
-.theme-black {
+.theme-black,
+.btn,
+.btn-primary {
     box-sizing: border-box;
     height: 48px;
     width: fit-content;
@@ -6,11 +8,32 @@
     border-radius: 999px;
     display: flex;
     align-items: center;
+    transition: background-color 0.5s ease-out 10ms;
     justify-content: space-between;
 
     &.theme-black p {
         color: $solid-blue-700;
     }
+}
+
+.btn,
+.btn-primary {
+    color: $solid-blue-700;
+    background-color: white;
+    transition: background-color 0.5s ease-out 10ms;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.theme-black:hover {
+    background-color: #c0e4e9;
+}
+
+:not(.btn-check) + .btn:hover,
+.btn:first-child:hover {
+    color: $solid-blue-700;
+    background-color: #c0e4e9;
+    border-color: $solid-blue-700;
 }
 
 .buttonWidth {

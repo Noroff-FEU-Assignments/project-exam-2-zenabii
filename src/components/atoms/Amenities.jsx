@@ -1,5 +1,3 @@
-import { Heading } from "../molecules/Heading";
-
 const barLounge = require("../../images/icons/bar_lounge.svg").default;
 const bathRobe = require("../../images/icons/bathrobe.svg").default;
 const fitnessCenter = require("../../images/icons/fitness_center.svg").default;
