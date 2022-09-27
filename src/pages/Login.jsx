@@ -1,4 +1,4 @@
-import BreadcrumbNav from "../components/atoms/BreadcrumbNav";
+import { BreadcrumbNav } from "../components/atoms/BreadcrumbNav";
 import { AdminLogin } from "../components/organisms/AdminLogin";
 import { Footer } from "../components/organisms/Footer";
 

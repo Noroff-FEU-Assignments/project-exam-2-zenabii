@@ -3,7 +3,7 @@ import React from "react";
 import { Card } from "../organisms/Card";
 import { useState, useEffect } from "react";
 
-export const Hotels = () => {
+export const Hotellist = () => {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [hotels, setHotels] = useState([]);

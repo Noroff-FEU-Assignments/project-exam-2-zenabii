@@ -7,7 +7,7 @@ import { Review } from "../molecules/Review";
 import { Amenities } from "../atoms/Amenities";
 import { Paragraph } from "../atoms/Paragraph";
 
-export const HotelContent = ({ id }) => {
+export const HotelContent = ({ id, handleFetchHotelTitle }) => {
     const [loading, setLoading] = useState(true);
     const [hotel, setHotel] = useState([]);
 
@@ -17,6 +17,10 @@ export const HotelContent = ({ id }) => {
             setHotel(hotels);
         });
     }, []);
+
+    useEffect(() => {
+        if (hotel?.attributes?.title) {handleFetchHotelTitle("hotel 1")}
+    }, [hotel]);
 
     if (loading === true) {
         return null;
