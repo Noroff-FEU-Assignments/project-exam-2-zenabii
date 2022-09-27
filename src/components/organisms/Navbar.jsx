@@ -11,8 +11,25 @@ import Login from "../../pages/Login";
 import Admin from "../../pages/Admin";
 import Hotel from "../../pages/Hotel";
 import logo from "../../images/dark_logo.svg";
+import { useState } from "react";
+import { removeItem, getItem } from "../../settings/store";
 
-function CenteredNavbar(props) {
+function CenteredNavbar() {
+    const [user, setUser] = useState("");
+    const [token, setToken] = useState("");
+    console.log(user);
+    const login = () => {
+        setUser(getItem("user"));
+        setToken(getItem("token"));
+    };
+
+    const logout = () => {
+        removeItem("user");
+        removeItem("token");
+        setUser("");
+        setToken("");
+    };
+
     return (
         <Router>
             <div className="navbar-alignment d-flex justify-content-between">
@@ -25,38 +42,56 @@ function CenteredNavbar(props) {
                         />
                     </Navbar.Brand>
                 </section>
-                <Navbar
-                    expand="lg"
-                    className={
-                        (props.theme === "light"
-                            ? "theme-light"
-                            : "theme-dark") + " d-flex z-index"
-                    }
-                >
+                <Navbar expand="lg" className=" d-flex z-index">
                     <Container>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="me-auto float-right">
+                            <Nav className="me-auto float-right" user={user}>
                                 <Nav.Link
-                                    className="uppercase"
+                                    className={({ isActive }) =>
+                                        "uppercase" +
+                                        (isActive ? " active" : "")
+                                    }
                                     href="/findyourstay"
                                 >
                                     Find your stay
                                 </Nav.Link>
                                 <Nav.Link
-                                    className="uppercase"
+                                    className={({ isActive }) =>
+                                        "uppercase" +
+                                        (isActive ? " active" : "")
+                                    }
                                     href="/seeanddo"
                                 >
                                     See & Do
                                 </Nav.Link>
-                                <Nav.Link className="uppercase" href="/about">
+                                <Nav.Link
+                                    className={({ isActive }) =>
+                                        "uppercase" +
+                                        (isActive ? " active" : "")
+                                    }
+                                    href="/about"
+                                >
                                     About
                                 </Nav.Link>
                                 <Nav.Link
-                                    className="uppercase"
+                                    className={({ isActive }) =>
+                                        "uppercase" +
+                                        (isActive ? " active" : "")
+                                    }
                                     href="/contactus"
                                 >
                                     Contact Us
+                                </Nav.Link>
+                                <Nav.Link
+                                    className={({ isActive }) =>
+                                        "uppercase" +
+                                        (isActive && !user ? " active" : "")
+                                    }
+                                    onClick={() => user && logout()}
+                                    href={user ? "/" : "/login"}
+                                >
+                                    {user ? "sign out" : "sign in"}
                                 </Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
@@ -70,7 +105,7 @@ function CenteredNavbar(props) {
                     <Route path="/seeanddo" element={<SeeAndDo />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contactus" element={<Contact />} />
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/login" element={<Login login={login} />} />
                     <Route path="/admin" element={<Admin />} />
                     <Route path="/hotel/:id" element={<Hotel />} />
                 </Routes>
