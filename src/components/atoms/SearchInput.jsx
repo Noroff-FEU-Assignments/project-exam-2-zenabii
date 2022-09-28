@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
-import { Hint, Typeahead } from "react-bootstrap-typeahead";
+import { Hint } from "react-bootstrap-typeahead";
 import { AsyncTypeahead } from "react-bootstrap-typeahead";
-
 import "react-bootstrap-typeahead/css/Typeahead.css";
 import "react-bootstrap-typeahead/css/Typeahead.bs5.css";
+import { useNavigate } from "react-router-dom";
 
 export const SearchInput = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [options, setOptions] = useState([]);
+
+    const navigate = useNavigate();
+
     const handleClick = (e) => {
-        console.log(e);
+        navigate("/hotel/" + e[0].id);
     };
+
     return (
         <AsyncTypeahead
             id="searchBar"
@@ -33,7 +37,6 @@ export const SearchInput = () => {
             renderInput={({ inputRef, referenceElementRef, ...inputProps }) => {
                 return (
                     <Hint>
-                        {console.log(JSON.stringify(options, null, 2))}
                         <FloatingLabel
                             controlId="floatingLabel"
                             label="Search for your stay here"
