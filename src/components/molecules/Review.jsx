@@ -10,7 +10,7 @@ export const Review = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    console.log(show);
+    // console.log(show);
 
     return (
         <>

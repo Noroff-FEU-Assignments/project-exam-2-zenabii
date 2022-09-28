@@ -9,33 +9,10 @@ import "react-bootstrap-typeahead/css/Typeahead.bs5.css";
 export const SearchInput = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [options, setOptions] = useState([]);
-
+    const handleClick = (e) => {
+        alert('hallo')
+    }
     return (
-        // <Typeahead
-        //     id="floating-label-example"
-        //     onChange={setSelected}
-        //     options={options}
-        //     placeholder="Choose a state..."
-        //     renderInput={({ inputRef, referenceElementRef, ...inputProps }) => {
-        //         return (
-        //             <Hint>
-        //                 <FloatingLabel
-        //                     controlId="floatingLabel"
-        //                     label="Search for your stay here"
-        //                 >
-        //                     <Form.Control
-        //                         {...inputProps}
-        //                         ref={(node) => {
-        //                             inputRef(node);
-        //                             referenceElementRef(node);
-        //                         }}
-        //                     />
-        //                 </FloatingLabel>
-        //             </Hint>
-        //         );
-        //     }}
-        //     selected={selected}
-        // />
         <AsyncTypeahead
             id="searchBar"
             isLoading={isLoading}
@@ -55,6 +32,7 @@ export const SearchInput = () => {
             renderInput={({ inputRef, referenceElementRef, ...inputProps }) => {
                 return (
                     <Hint>
+                        {console.log(JSON.stringify(options, null, 2))}
                         <FloatingLabel
                             controlId="floatingLabel"
                             label="Search for your stay here"
@@ -65,6 +43,7 @@ export const SearchInput = () => {
                                     inputRef(node);
                                     referenceElementRef(node);
                                 }}
+                                onClick={(e) => handleClick(e)}
                             />
                         </FloatingLabel>
                     </Hint>

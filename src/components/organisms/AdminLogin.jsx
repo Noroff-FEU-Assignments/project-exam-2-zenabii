@@ -23,6 +23,7 @@ export const AdminLogin = (props) => {
             if (res.error) {
                 setErrorMsg("Invalid login credentials.");
             } else {
+                console.log('imhere')
                 navigate("/admin");
             }
         });

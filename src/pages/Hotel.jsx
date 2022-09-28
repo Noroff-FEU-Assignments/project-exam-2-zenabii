@@ -10,18 +10,17 @@ export default function Hotel() {
 
     const [hotelTitle, setHotelTitle] = useState("");
 
-    const handleFetchHotelTitle = (test) => {
-        setHotelTitle(test);
+    const handleFetchHotelTitle = (title) => {
+        setHotelTitle(title);
     };
-    console.log("hotel " + hotelTitle);
+    
 
     return (
         <>
-            <BreadcrumbNav hotelTitle={hotelTitle} pathList={["Hotels", hotelTitle]}/>
+            <BreadcrumbNav pathList={["Hotels", hotelTitle]}/>
             <HotelContent handleFetchHotelTitle={handleFetchHotelTitle} id={id} />
             <QnaCta />
             <Footer />
-            {console.log(hotelTitle)}
         </>
     );
 }

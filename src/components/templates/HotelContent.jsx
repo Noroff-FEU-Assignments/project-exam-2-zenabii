@@ -16,11 +16,11 @@ export const HotelContent = ({ id, handleFetchHotelTitle }) => {
             setLoading(false);
             setHotel(hotels);
         });
-    }, []);
+    }, [id]);
 
     useEffect(() => {
-        if (hotel?.attributes?.title) {handleFetchHotelTitle("hotel 1")}
-    }, [hotel]);
+        if (hotel?.attributes?.title) {handleFetchHotelTitle(hotel?.attributes?.title)}
+    }, [handleFetchHotelTitle, hotel]);
 
     if (loading === true) {
         return null;
