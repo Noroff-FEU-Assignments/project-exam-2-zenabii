@@ -10,11 +10,12 @@ export const SearchInput = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [options, setOptions] = useState([]);
     const handleClick = (e) => {
-        alert('hallo')
-    }
+        console.log(e);
+    };
     return (
         <AsyncTypeahead
             id="searchBar"
+            onChange={(e) => handleClick(e)}
             isLoading={isLoading}
             labelKey={(option) => `${option.attributes.title}`}
             onSearch={(query) => {
@@ -43,7 +44,6 @@ export const SearchInput = () => {
                                     inputRef(node);
                                     referenceElementRef(node);
                                 }}
-                                onClick={(e) => handleClick(e)}
                             />
                         </FloatingLabel>
                     </Hint>

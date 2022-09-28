@@ -6,7 +6,7 @@ import { useState } from "react";
 import { authenticate } from "../../settings/api";
 import { useNavigate } from "react-router-dom";
 
-export const AdminLogin = (props) => {
+export const AdminLogin = ({ login }) => {
     const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
@@ -23,7 +23,7 @@ export const AdminLogin = (props) => {
             if (res.error) {
                 setErrorMsg("Invalid login credentials.");
             } else {
-                console.log('imhere')
+                login();
                 navigate("/admin");
             }
         });
