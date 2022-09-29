@@ -1,4 +1,4 @@
-import { BannerText } from "../molecules/BannerText";
+import { Heading } from "../molecules/Heading";
 
 const image = require("../../images/atlantic-puin-nature-ocean.jpg");
 
@@ -10,12 +10,11 @@ export const ActivityBanner = () => (
             alt="green landscape mountains snow"
         />
         <div className="activityBannerPosition">
-            <BannerText
+            <Heading
                 theme="blue"
                 subject="Introduction"
                 title="Experience true
                 wildlife with us"
-                paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             />
         </div>
     </section>
