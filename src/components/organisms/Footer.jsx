@@ -7,7 +7,9 @@ export const Footer = () => (
         <div className="p-2 flex-fill bd-highlight logoContainer">
             <img src={logo} alt="Holidaze logo" className="footerLogo" />
             <div>
-                <p>Share your experience through Holidaze with #Daze</p>
+                <p className="text-align">
+                    Share your experience through Holidaze with #Daze
+                </p>
             </div>
         </div>
         <div className="p-2 flex-fill bd-highlight">
