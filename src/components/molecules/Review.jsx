@@ -16,25 +16,20 @@ export const Review = ({ id, title, img }) => {
     const url = baseUrl + "enquiries";
 
     const [form, setForm] = useState({
+        hoteldata: {
+            id,
+            title,
+            img,
+        },
         name: "",
         lastname: "",
         email: "",
         message: "",
     });
 
-    const [hotel, setHotel] = useState({
-        id: "",
-        title: "",
-        img: "",
-    });
-
     const handleOnChange = (e, key) => {
         setForm({
             ...form,
-            [key]: e.target.value,
-        });
-        setHotel({
-            ...hotel,
             [key]: e.target.value,
         });
     };
@@ -44,14 +39,12 @@ export const Review = ({ id, title, img }) => {
         axios.post(
             url,
             { data: form },
-            { data: hotel },
             {
                 headers: { "content-type": "application/json" },
             }
         );
-        console.log("submit");
         console.log(handleSubmit);
-        console.log(hotel);
+        console.log(form);
     };
 
     return (
@@ -77,7 +70,6 @@ export const Review = ({ id, title, img }) => {
                     />
                 </Button>
             </div>
-
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>
@@ -136,7 +128,7 @@ export const Review = ({ id, title, img }) => {
                             <Form.Control
                                 type="email"
                                 placeholder="name@example.com"
-                                onChange={(e) => handleOnChange(e, "name")}
+                                onChange={(e) => handleOnChange(e, "email")}
                                 required
                             />
                         </FloatingLabel>
