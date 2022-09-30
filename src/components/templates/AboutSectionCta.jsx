@@ -16,8 +16,8 @@ export const AboutSectionCta = () => (
                 consectetur adipiscing elit. 
                 Proin porta a orci in aliquet. "
                 paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucib us massa at auctor lacinia. Proin porta a orci in aliquet. Nam a nunc quam. Maecenas lacinia facilisis bibendum. Quam Suspendisse potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et orci.."
+                secondParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucib us massa at auctor lacinia. Proin porta a orci in aliquet. Nam a nunc quam. Maecenas lacinia facilisis bibendum. Quam Suspendisse potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et orci. "
             />
-            <Paragraph paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucib us massa at auctor lacinia. Proin porta a orci in aliquet. Nam a nunc quam. Maecenas lacinia facilisis bibendum. Quam Suspendisse potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et orci.." />
         </div>
     </section>
 );
