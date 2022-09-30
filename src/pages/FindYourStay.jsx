@@ -1,6 +1,5 @@
 import { SearchHeader } from "../components/organisms/SearchHeader";
 import { QnaCta } from "../components/organisms/QnaCta";
-import { Footer } from "../components/organisms/Footer";
 import { Hotellist } from "../components/templates/Hotellist";
 import { TitleText } from "../components/molecules/TitleText";
 
@@ -19,7 +18,6 @@ export default function FindYourStay() {
                 </div>
             </div>
             <QnaCta />
-            <Footer />
         </>
     );
 }

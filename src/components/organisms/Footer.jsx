@@ -13,9 +13,9 @@ export const Footer = () => (
             </div>
         </div>
         <div className="p-2 flex-fill bd-highlight">
-            <Nav defaultActiveKey="/home" className="flex-column">
+            <Nav defaultActiveKey="/" className="flex-column">
                 <p className="footerTitle">MENY</p>
-                <Nav.Link className="uppercase" href="/home">
+                <Nav.Link className="uppercase" href="/">
                     Home
                 </Nav.Link>
                 <Nav.Link className="uppercase" href="/findyourstay">

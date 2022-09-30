@@ -1,6 +1,5 @@
 import { ContactFormWithText } from "../components/templates/ContactFormWithText";
 import { CardGroup } from "../components/templates/CardGroup";
-import { Footer } from "../components/organisms/Footer";
 import { FullWidthSection } from "../components/templates/FullWidthSection";
 
 const image = require("../images/winter-white-house-nature.jpg");
@@ -12,7 +11,6 @@ export default function Contact() {
             <ContactFormWithText />
             <CardGroup />
             <FullWidthSection />
-            <Footer />
         </>
     );
 }

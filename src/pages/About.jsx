@@ -2,7 +2,6 @@ import { HeaderText } from "../components/organisms/HeaderText";
 import { AboutSection } from "../components/templates/AboutSection";
 import { Quote } from "../components/atoms/Quote";
 import { AboutSectionCta } from "../components/templates/AboutSectionCta";
-import { Footer } from "../components/organisms/Footer";
 import { QnaCta } from "../components/organisms/QnaCta";
 
 export default function About() {
@@ -13,7 +12,6 @@ export default function About() {
             <Quote />
             <AboutSectionCta />
             <QnaCta />
-            <Footer />
         </>
     );
 }

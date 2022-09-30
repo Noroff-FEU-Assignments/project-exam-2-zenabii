@@ -1,4 +1,3 @@
-import { Footer } from "../components/organisms/Footer";
 import { ActivityBanner } from "../components/organisms/ActivityBanner";
 import { ActivitySection } from "../components/templates/ActivitySection";
 import { FullWidthSection } from "../components/templates/FullWidthSection";
@@ -11,7 +10,6 @@ export default function SeeAndDo() {
             <ActivitySection />
             <FullWidthSection />
             <ActivitySectionReversed />
-            <Footer />
         </>
     );
 }

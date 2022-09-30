@@ -9,6 +9,7 @@ import FindYourStay from "./pages/FindYourStay";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import Hotel from "./pages/Hotel";
+import { Footer } from "./components/organisms/Footer";
 import { useEffect, useState } from "react";
 import { removeItem, getItem } from "./settings/store";
 
@@ -55,6 +56,7 @@ function App() {
                     </Routes>
                 </main>
             </Router>
+            <Footer />
         </>
     );
 }
