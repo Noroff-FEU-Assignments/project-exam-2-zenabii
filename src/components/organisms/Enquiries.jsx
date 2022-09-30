@@ -21,9 +21,6 @@ export const Enquires = () => (
                     <p className="me-2">Email:</p> <p>jane.doe@gmail.com</p>
                 </span>
                 <span className="d-flex">
-                    <p className="me-2">Phone:</p> <p>45477475</p>
-                </span>
-                <span className="d-flex">
                     <p className="me-2">Message:</p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipis cing

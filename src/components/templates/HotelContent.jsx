@@ -19,7 +19,9 @@ export const HotelContent = ({ id, handleFetchHotelTitle }) => {
     }, [id]);
 
     useEffect(() => {
-        if (hotel?.attributes?.title) {handleFetchHotelTitle(hotel?.attributes?.title)}
+        if (hotel?.attributes?.title) {
+            handleFetchHotelTitle(hotel?.attributes?.title);
+        }
     }, [handleFetchHotelTitle, hotel]);
 
     if (loading === true) {
@@ -41,7 +43,11 @@ export const HotelContent = ({ id, handleFetchHotelTitle }) => {
                         subject={hotel.attributes.title}
                         title={hotel.attributes.title}
                     />
-                    <Review />
+                    <Review
+                        id={hotel.id}
+                        title={hotel.attributes.title}
+                        img={hotel.attributes.images.data[0].attributes.url}
+                    />
                     <Paragraph paragraph={hotel.attributes.information} />
                 </div>
                 <div className="reverse-flex">

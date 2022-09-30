@@ -20,3 +20,20 @@
     justify-content: center;
     margin-left: 24px;
 }
+
+.requestImg {
+    width: 200px;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+
+.requestContainer {
+    display: flex;
+}
+
+.requestGrid {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}

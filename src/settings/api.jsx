@@ -24,6 +24,17 @@ export const fetchHotel = async (hotelId) => {
     }
 };
 
+export const fetchContacts = async () => {
+    const url = baseUrl + "contacts";
+    try {
+        const response = await fetch(url);
+        const contact = await response.json();
+        return contact.data;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 export const authenticate = async (username, password) => {
     const url = baseUrl + "auth/local/";
     const data = JSON.stringify({ identifier: username, password: password });
