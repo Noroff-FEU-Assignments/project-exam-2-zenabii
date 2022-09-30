@@ -3,6 +3,7 @@ import Tabs from "react-bootstrap/Tabs";
 import { Paragraph } from "../atoms/Paragraph";
 import { Enquires } from "../organisms/Enquiries";
 import { NesMessages } from "../organisms/NewMessages";
+import { CreateHotel } from "../organisms/CreateHotel";
 
 function AdminPanel() {
     return (
@@ -16,7 +17,7 @@ function AdminPanel() {
                 <Enquires />
             </Tab>
             <Tab eventKey="establishments" title="Create new establishment">
-                <Paragraph paragraph="lol" />
+                <CreateHotel />
             </Tab>
             <Tab eventKey="messages" title="New messages">
                 <NesMessages />

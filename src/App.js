@@ -12,6 +12,7 @@ import Hotel from "./pages/Hotel";
 import { Footer } from "./components/organisms/Footer";
 import { useEffect, useState } from "react";
 import { removeItem, getItem } from "./settings/store";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
     const [user, setUser] = useState("");
@@ -35,28 +36,30 @@ function App() {
 
     return (
         <>
-            <Router>
-                <CenteredNavbar user={user} logout={logout} />
-                <main>
-                    <Routes>
-                        <Route path="/" exact element={<Home />} />
-                        <Route
-                            path="/findyourstay"
-                            element={<FindYourStay />}
-                        />
-                        <Route path="/seeanddo" element={<SeeAndDo />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/contactus" element={<Contact />} />
-                        <Route
-                            path="/login"
-                            element={<Login login={login} />}
-                        />
-                        <Route path="/admin" element={<Admin />} />
-                        <Route path="/hotel/:id" element={<Hotel />} />
-                    </Routes>
-                </main>
-            </Router>
-            <Footer />
+            <HelmetProvider>
+                <Router>
+                    <CenteredNavbar user={user} logout={logout} />
+                    <main>
+                        <Routes>
+                            <Route path="/" exact element={<Home />} />
+                            <Route
+                                path="/findyourstay"
+                                element={<FindYourStay />}
+                            />
+                            <Route path="/seeanddo" element={<SeeAndDo />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/contactus" element={<Contact />} />
+                            <Route
+                                path="/login"
+                                element={<Login login={login} />}
+                            />
+                            <Route path="/admin" element={<Admin />} />
+                            <Route path="/hotel/:id" element={<Hotel />} />
+                        </Routes>
+                    </main>
+                </Router>
+                <Footer />
+            </HelmetProvider>
         </>
     );
 }

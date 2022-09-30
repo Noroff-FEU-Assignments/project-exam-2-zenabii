@@ -51,6 +51,13 @@ export const Review = () => {
                         <Form.Control type="name" placeholder="First name" />
                     </FloatingLabel>
                     <FloatingLabel
+                        controlId="floatingLastName"
+                        label="Last name"
+                        className="mb-3"
+                    >
+                        <Form.Control type="text" placeholder="Last Name" />
+                    </FloatingLabel>
+                    <FloatingLabel
                         controlId="floatingInput"
                         label="Email address"
                         className="mb-3"
@@ -59,21 +66,6 @@ export const Review = () => {
                             type="email"
                             placeholder="name@example.com"
                         />
-                    </FloatingLabel>
-
-                    <FloatingLabel
-                        controlId="floatingLastName"
-                        label="Last name"
-                        className="mb-3"
-                    >
-                        <Form.Control type="text" placeholder="Last Name" />
-                    </FloatingLabel>
-                    <FloatingLabel
-                        controlId="floatingPhone"
-                        label="Phone"
-                        className="mb-3"
-                    >
-                        <Form.Control type="phone" placeholder="Phone" />
                     </FloatingLabel>
                     <FloatingLabel
                         controlId="floatingTextarea2"
