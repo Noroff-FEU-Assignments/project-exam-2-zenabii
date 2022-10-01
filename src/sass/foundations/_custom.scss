@@ -25,7 +25,6 @@ body {
 
 .uppercase {
     text-transform: uppercase;
-    color: $contrast-dark-700;
     margin: 0px 8px;
 }
 
@@ -37,4 +36,12 @@ body {
     width: 100%;
     object-fit: cover;
     margin-top: 80px;
+}
+
+.nav-link {
+    color: $solid-blue-700;
+}
+
+.nav-link:hover {
+    color: $contrast-green-700;
 }
