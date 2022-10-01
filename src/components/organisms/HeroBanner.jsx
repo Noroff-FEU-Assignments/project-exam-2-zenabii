@@ -1,5 +1,6 @@
 import { baseUrl } from "../../settings/api";
 import React, { useState, useEffect } from "react";
+import Spinner from "react-bootstrap/Spinner";
 
 export const HeroBanner = () => {
     const [bannerUrl, setBannerUrl] = useState(null);
@@ -16,7 +17,7 @@ export const HeroBanner = () => {
                     const json = await response.json();
                     setBannerUrl(json);
                 } else {
-                    setErrorMessage("kekw");
+                    setErrorMessage("Oops! Something failed!");
                 }
             } catch (error) {
                 setErrorMessage(error.toString());
@@ -26,7 +27,11 @@ export const HeroBanner = () => {
     }, []);
 
     if (bannerUrl === null) {
-        return <div>Loading...zzzzz</div>;
+        return (
+            <Spinner animation="border" role="status" className="position">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
+        );
     }
 
     if (errorMessage !== null) {

@@ -2,6 +2,7 @@ import { fetchHotels } from "../../settings/api";
 import React from "react";
 import { Card } from "../organisms/Card";
 import { useState, useEffect } from "react";
+import Spinner from "react-bootstrap/Spinner";
 
 export const Hotellist = () => {
     const [loading, setLoading] = useState(true);
@@ -24,6 +25,14 @@ export const Hotellist = () => {
                           .indexOf(searchTerm.toLowerCase()) !== -1
               )
             : hotels;
+
+    if (hotels === null) {
+        return (
+            <Spinner animation="border" role="status" className="position">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
+        );
+    }
     return (
         <>
             {results.map((hotel) => (
