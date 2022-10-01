@@ -13,6 +13,22 @@ export const fetchHotels = async () => {
     }
 };
 
+export const fetchFeaturedHotels = async (featured = false) => {
+    const url =
+        baseUrl +
+        "hotels/" +
+        "?filters[featured][$eq]=true" +
+        "&populate=*" +
+        (featured ? "?featured=true" : "");
+    try {
+        const response = await fetch(url);
+        const hotel = await response.json();
+        return hotel.data;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 export const fetchHotel = async (hotelId) => {
     const url = baseUrl + "hotels/" + hotelId + "?populate=*";
     try {
