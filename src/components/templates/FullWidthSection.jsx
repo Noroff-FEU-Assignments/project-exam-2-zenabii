@@ -7,7 +7,7 @@ export const FullWidthSection = () => (
         <img
             src={image}
             className="bannerImg imgMargin"
-            alt="green landscape mountains snow"
+            alt="iceland baths tourists volcano water steam"
         />
         <FullWidthText
             theme="blue"

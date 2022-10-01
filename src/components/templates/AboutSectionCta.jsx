@@ -6,7 +6,11 @@ const image = require("../../images/vehicles-mountains-lake.jpg");
 export const AboutSectionCta = () => (
     <section className="two-columns-grid">
         <div className="illustraton-part-left">
-            <img src={image} alt="illustration" className="illustration" />
+            <img
+                src={image}
+                alt="white vehicles driving across iceland roads"
+                className="illustration"
+            />
         </div>
         <div className="d-flex flex-column justify-content-center">
             <TitleText

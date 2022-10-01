@@ -5,7 +5,11 @@ const image = require("../../images/horses-nature-iceland.jpg");
 export const ActivitySectionReversed = () => (
     <section className="two-columns-grid">
         <div className="illustraton-part-left">
-            <img src={image} alt="illustration" className="illustration" />
+            <img
+                src={image}
+                alt="two iceland horses looking at camera in nature"
+                className="illustration"
+            />
         </div>
         <TitleTextLarge
             theme="blue"

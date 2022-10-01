@@ -6,7 +6,11 @@ const image = require("../../images/white_house_ocean_nature.jpg");
 export const TextIllustratedButton = () => (
     <section className="two-columns-grid">
         <div className="illustraton-part-left">
-            <img src={image} alt="illustration" className="illustration" />
+            <img
+                src={image}
+                alt="white house grey car ocean"
+                className="illustration"
+            />
         </div>
         <div className="d-flex flex-column justify-content-center">
             <TitleText

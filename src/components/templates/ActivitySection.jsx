@@ -20,7 +20,11 @@ export const ActivitySection = () => (
             orci."
         />
         <div className="illustraton-part-right">
-            <img src={image} alt="illustration" className="illustration" />
+            <img
+                src={image}
+                alt="birds in tall grass in iceland"
+                className="illustration"
+            />
         </div>
     </section>
 );

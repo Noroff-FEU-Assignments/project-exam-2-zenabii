@@ -15,7 +15,11 @@ export const TextIllustrated = () => (
             orci."
         />
         <div className="illustraton-part-right">
-            <img src={image} alt="illustration" className="illustration" />
+            <img
+                src={image}
+                alt="old abondended house in nature"
+                className="illustration"
+            />
         </div>
     </section>
 );

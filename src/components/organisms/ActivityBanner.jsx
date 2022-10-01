@@ -7,7 +7,7 @@ export const ActivityBanner = () => (
         <img
             src={image}
             className="activityBannerImg"
-            alt="green landscape mountains snow"
+            alt="birds in nature tall grass blue sky"
         />
         <div className="activityBannerPosition">
             <Heading

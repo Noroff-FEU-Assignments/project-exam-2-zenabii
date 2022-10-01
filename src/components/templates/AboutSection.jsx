@@ -7,7 +7,7 @@ export const AboutSection = () => (
     <section>
         <img
             src={image}
-            alt="illustration"
+            alt="green tall mountains white sky snow"
             className="bannerImg imgMargin marginTop"
         />
         <div className="sectionWidth">
