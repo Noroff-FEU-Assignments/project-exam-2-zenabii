@@ -47,14 +47,13 @@ export const ContactForm = () => {
                 }
             );
             if (response.status === 200) {
-                setMessage("ka enn du vil ha der");
+                setMessage("Your message has been sent!");
                 setForm(blankForm);
                 setValidated(false);
             } else {
                 setErrormessage("Something happend!");
             }
         }
-        console.log(handleSubmit);
     };
 
     return (

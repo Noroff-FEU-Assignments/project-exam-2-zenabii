@@ -6,6 +6,7 @@ import { Heading } from "../molecules/Heading";
 import { Review } from "../molecules/Review";
 import { Amenities } from "../atoms/Amenities";
 import { Paragraph } from "../atoms/Paragraph";
+import { Spinner } from "react-bootstrap";
 
 export const HotelContent = ({ id, handleFetchHotelTitle }) => {
     const [loading, setLoading] = useState(true);
@@ -24,12 +25,12 @@ export const HotelContent = ({ id, handleFetchHotelTitle }) => {
         }
     }, [handleFetchHotelTitle, hotel]);
 
-    if (loading === true) {
-        return null;
+    if (loading) {
+        return <Spinner />;
     }
 
     return (
-        <>
+        <React.Fragment key={hotel.id}>
             <HotelCarousel
                 slides={hotel.attributes.images.data.map((image) => ({
                     url: image.attributes.url,
@@ -54,6 +55,6 @@ export const HotelContent = ({ id, handleFetchHotelTitle }) => {
                     <Amenities />
                 </div>
             </section>
-        </>
+        </React.Fragment>
     );
 };

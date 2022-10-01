@@ -5,29 +5,21 @@ import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { baseUrl } from "../../settings/api";
 import axios from "axios";
+import { DisplayMessage } from "../atoms/DisplayMessage";
 
 export const Review = ({ id, title, img }) => {
+    const url = baseUrl + "enquiries";
     const svgBlack = require("../../images/arrow-right.svg").default;
     const [show, setShow] = useState(false);
+    const [validated, setValidated] = useState(false);
+    const [message, setMessage] = useState("");
+    const [errormessage, setErrormessage] = useState("");
+    const [loading, setLoading] = useState(true);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const url = baseUrl + "enquiries";
-
-    const [validated, setValidated] = useState(false);
-
-    const handleValidationOnSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
-        setValidated(true);
-    };
-
-    const [form, setForm] = useState({
+    const blankForm = {
         hoteldata: {
             id,
             title,
@@ -37,7 +29,9 @@ export const Review = ({ id, title, img }) => {
         lastname: "",
         email: "",
         message: "",
-    });
+    };
+
+    const [form, setForm] = useState(blankForm);
 
     const handleOnChange = (e, key) => {
         setForm({
@@ -48,15 +42,28 @@ export const Review = ({ id, title, img }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.post(
-            url,
-            { data: form },
-            {
-                headers: { "content-type": "application/json" },
+        e.stopPropagation();
+
+        setValidated(true);
+
+        const enquiryForm = e.currentTarget;
+        console.log(enquiryForm.checkValidity());
+        if (enquiryForm.checkValidity() === true) {
+            const response = await axios.post(
+                url,
+                { data: form },
+                {
+                    headers: { "content-type": "application/json" },
+                }
+            );
+            if (response.status === 200) {
+                setMessage("Your enquiry was sent!");
+                setForm(blankForm);
+                setValidated(false);
+            } else {
+                setErrormessage("Something happend!");
             }
-        );
-        console.log(handleSubmit);
-        console.log(form);
+        }
     };
 
     return (
@@ -109,7 +116,7 @@ export const Review = ({ id, title, img }) => {
                 </Modal.Header>
                 <Modal.Body>
                     <Form
-                        onSubmit={(handleSubmit, handleValidationOnSubmit)}
+                        onSubmit={handleSubmit}
                         noValidate
                         validated={validated}
                     >
@@ -176,14 +183,22 @@ export const Review = ({ id, title, img }) => {
                                 pricerange you're interested in.
                             </Form.Control.Feedback>
                         </FloatingLabel>
-                        <Button
-                            // onClick={handleClose}
-                            type="submit"
-                            onSubmit={handleSubmit}
-                        >
-                            Send an enquiry
-                        </Button>
+                        <Button type="submit">Send an enquiry</Button>
                     </Form>
+                    <div className="message-container">
+                        {message && (
+                            <DisplayMessage
+                                message={message}
+                                messageType={"success"}
+                            />
+                        )}
+                        {errormessage && (
+                            <DisplayMessage
+                                message={errormessage}
+                                messageType={"error"}
+                            />
+                        )}
+                    </div>
                 </Modal.Body>
                 <Modal.Footer></Modal.Footer>
             </Modal>

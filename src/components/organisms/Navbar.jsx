@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function CenteredNavbar({ user, logout }) {
     return (
-        <div className="navbar-alignment d-flex justify-content-between">
+        <div className="navbar-alignment d-flex justify-content-between navBackground">
             <section className="display-grid">
                 <Navbar.Brand href="/">
                     <img
