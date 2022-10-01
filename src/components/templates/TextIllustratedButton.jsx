@@ -23,7 +23,7 @@ export const TextIllustratedButton = () => (
             faucib us massa at auctor lacinia. Proin porta a orci.
             orci."
             />
-            <Button theme="black" link="#" text="Book" />
+            <Button theme="black" link="FindYourStay" text="Send an enquiry" />
         </div>
     </section>
 );

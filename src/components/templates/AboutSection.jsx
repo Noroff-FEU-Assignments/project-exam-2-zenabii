@@ -12,6 +12,7 @@ export const AboutSection = () => (
         />
         <div className="sectionWidth">
             <TitleText
+                Link="/contactus"
                 theme="blue"
                 subject="Who are we"
                 title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."

@@ -11,9 +11,6 @@ export const FullWidthText = ({
         <div className="ctaActivity">
             <p className="subject">{subject}</p>
             <h2>{title}</h2>
-            <div className="buttonContainer">
-                <Button theme="black" link="#" text="Send an enquiry" />
-            </div>
         </div>
         <div className="paragraphColumn flexWidth">
             <Paragraph paragraph={paragraph} />

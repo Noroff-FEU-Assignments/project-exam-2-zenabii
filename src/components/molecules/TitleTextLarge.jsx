@@ -15,7 +15,11 @@ export const TitleTextLarge = ({
             <Paragraph paragraph={paragraph} />
             <Paragraph paragraph={secondParagraph} />
             <div className="buttonContainer">
-                <Button theme="black" link="#" text="Send an enquiry" />
+                <Button
+                    theme="black"
+                    link="/contactus"
+                    text="Send an enquiry"
+                />
             </div>
         </div>
     </div>

@@ -11,7 +11,7 @@ export const QnaCta = () => (
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 faucib us massa at auctor lacinia.
             </p>
-            <Button theme="white" link="#" text="Send us an email" />
+            <Button theme="white" link="/ContactUs" text="Send us an email" />
         </div>
     </section>
 );
