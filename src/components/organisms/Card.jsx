@@ -6,7 +6,7 @@ export const Card = ({ img, title, link, alternativetext }) => (
             <img src={img} alt={alternativetext} className="cardIllustration" />
             <div className="cardBody">
                 <h4>{title}</h4>
-                <ArrowButton link={link} />
+                <ArrowButton />
             </div>
         </div>
     </a>

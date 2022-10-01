@@ -57,8 +57,8 @@ function App() {
                             <Route path="/hotel/:id" element={<Hotel />} />
                         </Routes>
                     </main>
+                    <Footer />
                 </Router>
-                <Footer />
             </HelmetProvider>
         </>
     );

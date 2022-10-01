@@ -2,8 +2,7 @@ import { Card } from "../organisms/Card";
 import { TitleText } from "../molecules/TitleText";
 import { fetchFeaturedHotels } from "../../settings/api";
 import { useState, useEffect } from "react";
-
-const image = require("../../images/green-nature-old-house.jpg");
+import { Spinner } from "react-bootstrap";
 
 export const CardGroup = () => {
     const [loading, setLoading] = useState(true);
@@ -26,6 +25,10 @@ export const CardGroup = () => {
                           .indexOf(searchTerm.toLowerCase()) !== -1
               )
             : featuredHotels;
+
+    if (loading) {
+        return <Spinner />;
+    }
 
     return (
         <>

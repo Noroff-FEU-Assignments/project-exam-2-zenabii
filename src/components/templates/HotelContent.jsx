@@ -31,22 +31,10 @@ export const HotelContent = ({ id, handleFetchHotelTitle }) => {
     return (
         <>
             <HotelCarousel
-                img1={hotel.attributes.images.data[0].attributes.url}
-                img2={hotel.attributes.images.data[1].attributes.url}
-                img3={hotel.attributes.images.data[2].attributes.url}
-                img4={hotel.attributes.images.data[3].attributes.url}
-                alternativeText1={
-                    hotel.attributes.images.data[0].attributes.alternativeText
-                }
-                alternativeText2={
-                    hotel.attributes.images.data[1].attributes.alternativeText
-                }
-                alternativeText3={
-                    hotel.attributes.images.data[2].attributes.alternativeText
-                }
-                alternativeText4={
-                    hotel.attributes.images.data[3].attributes.alternativeText
-                }
+                slides={hotel.attributes.images.data.map((image) => ({
+                    url: image.attributes.url,
+                    altText: image.attributes.alternativeText,
+                }))}
             />
             <section className="hotelInformation">
                 <div>

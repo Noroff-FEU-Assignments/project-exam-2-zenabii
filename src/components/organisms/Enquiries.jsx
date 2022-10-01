@@ -27,12 +27,12 @@ export const Enquires = () => {
     return (
         <>
             {results.map((enquiry) => (
-                <>
+                <React.Fragment key={enquiry.id}>
                     <div className="dateAdded">
                         <p className="me-2">Message sent:</p>
                         {enquiry.attributes.createdAt}
                     </div>
-                    <div className="enquireBody bodyFlex" key={enquiry.id}>
+                    <div className="enquireBody bodyFlex">
                         <div>
                             <img
                                 src={enquiry.attributes.hoteldata.img}
@@ -40,21 +40,21 @@ export const Enquires = () => {
                                 className="enquireHotel"
                             />
                         </div>
-                        <div key={enquiry.id}>
+                        <div>
                             <span className="d-flex">
-                                <p className="me-2">Hotel:</p>{" "}
+                                <p className="me-2">Hotel:</p>
                                 <p>{enquiry.attributes.hoteldata.title}</p>
                             </span>
                             <span className="d-flex">
-                                <p className="me-2">First name:</p>{" "}
+                                <p className="me-2">First name:</p>
                                 <p>{enquiry.attributes.name}</p>
                             </span>
                             <span className="d-flex">
-                                <p className="me-2">Last name:</p>{" "}
+                                <p className="me-2">Last name:</p>
                                 <p>{enquiry.attributes.lastname}</p>
                             </span>
                             <span className="d-flex">
-                                <p className="me-2">Email:</p>{" "}
+                                <p className="me-2">Email:</p>
                                 <p>{enquiry.attributes.email}</p>
                             </span>
                             <span className="d-flex">
@@ -63,7 +63,7 @@ export const Enquires = () => {
                             </span>
                         </div>
                     </div>
-                </>
+                </React.Fragment>
             ))}
         </>
     );

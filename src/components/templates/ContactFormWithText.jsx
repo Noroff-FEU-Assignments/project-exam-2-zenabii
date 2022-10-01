@@ -1,6 +1,5 @@
-import ContactForm from "../organisms/ContactForm";
+import { ContactForm } from "../organisms/ContactForm";
 import { TitleText } from "../molecules/TitleText";
-import { Paragraph } from "../atoms/Paragraph";
 
 export const ContactFormWithText = () => (
     <section className="displayGrid">

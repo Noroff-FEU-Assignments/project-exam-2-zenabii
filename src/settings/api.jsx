@@ -1,6 +1,8 @@
+import axios from "axios";
 import { setItem, getItem } from "./store";
 
-export const baseUrl = "https://strapi-api-holidaze-maria.herokuapp.com/api/";
+// export const baseUrl = "https://strapi-api-holidaze-maria.herokuapp.com/api/";
+export const baseUrl = "http://localhost:1337/api/";
 
 export const fetchHotels = async () => {
     const url = baseUrl + "hotels?populate=*";
@@ -113,7 +115,9 @@ const getFormData = (form) => {
 };
 
 export const createHotel = async (form) => {
-    const url = baseUrl + "hotels/";
+    const url = baseUrl + "hotels";
+
+    console.log(getFormData(form));
 
     const token = getItem("token");
     const options = {

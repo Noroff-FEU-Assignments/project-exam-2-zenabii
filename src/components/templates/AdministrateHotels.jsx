@@ -108,10 +108,11 @@ export const AdministrateHotels = () => {
                     <div className="message-container">{displayMessage}</div>
                     <div className="input-group upload mb-3">
                         <input
-                            name="image"
+                            name="images"
                             type="file"
                             className="form-control edit"
                             id="inputGroupFile02"
+                            multiple
                         />
                     </div>
                     <div className="input-group upload mb-3">
@@ -214,10 +215,11 @@ export const AdministrateHotels = () => {
                             <div className="message-container"></div>
                             <div className="input-group upload mb-3">
                                 <input
-                                    name="image"
+                                    name="images"
                                     type="file"
                                     className="form-control edit"
                                     id="inputGroupFile02"
+                                    multiple
                                 />
                             </div>
                             <div className="input-group upload mb-3">

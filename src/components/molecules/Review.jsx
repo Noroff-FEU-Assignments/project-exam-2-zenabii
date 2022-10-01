@@ -46,7 +46,7 @@ export const Review = ({ id, title, img }) => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         axios.post(
             url,

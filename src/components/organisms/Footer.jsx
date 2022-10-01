@@ -1,4 +1,5 @@
 import Nav from "react-bootstrap/Nav";
+import { NavLink } from "react-router-dom";
 
 import logo from "../../images/dark_logo.svg";
 
@@ -15,29 +16,29 @@ export const Footer = () => (
         <div className="p-2 flex-fill bd-highlight">
             <Nav defaultActiveKey="/" className="flex-column">
                 <p className="footerTitle">MENY</p>
-                <Nav.Link className="uppercase" href="/">
+                <NavLink className="uppercase" to="/">
                     Home
-                </Nav.Link>
-                <Nav.Link className="uppercase" href="/findyourstay">
+                </NavLink>
+                <NavLink className="uppercase" to="/findyourstay">
                     Find your stay
-                </Nav.Link>
-                <Nav.Link className="uppercase" href="/seeanddo">
+                </NavLink>
+                <NavLink className="uppercase" to="/seeanddo">
                     See & Do
-                </Nav.Link>
-                <Nav.Link className="uppercase" href="/about">
+                </NavLink>
+                <NavLink className="uppercase" to="/about">
                     About
-                </Nav.Link>
-                <Nav.Link className="uppercase" href="/contactus">
+                </NavLink>
+                <NavLink className="uppercase" to="/contactus">
                     Contact Us
-                </Nav.Link>
+                </NavLink>
             </Nav>
         </div>
         <div className="p-2 flex-fill bd-highlight">
             <Nav defaultActiveKey="/home" className="flex-column">
                 <p className="footerTitle">ADMIN</p>
-                <Nav.Link className="uppercase" href="/login">
+                <NavLink className="uppercase" to="/login">
                     Login
-                </Nav.Link>
+                </NavLink>
             </Nav>
         </div>
     </footer>

@@ -4,27 +4,33 @@ import { Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../../settings/api";
+import Spinner from "react-bootstrap/Spinner";
+import { DisplayMessage } from "../atoms/DisplayMessage";
 
-function ContactForm() {
+export const ContactForm = () => {
     const url = baseUrl + "contacts";
-
+    const [loading, setLoading] = useState(true);
     const [validated, setValidated] = useState(false);
+    const [message, setMessage] = useState("");
+    const [errormessage, setErrormessage] = useState("");
 
-    const [form, setForm] = useState({
+    const blankForm = {
         name: "",
         lastname: "",
         email: "",
         message: "",
-    });
+    };
 
-    const handleOnChange = (e, key) => {
+    const [form, setForm] = useState(blankForm);
+
+    const handleOnChange = (key) => (e) => {
         setForm({
             ...form,
             [key]: e.target.value,
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         e.stopPropagation();
 
@@ -33,13 +39,20 @@ function ContactForm() {
         const contactForm = e.currentTarget;
         console.log(contactForm.checkValidity());
         if (contactForm.checkValidity() === true) {
-            axios.post(
+            const response = await axios.post(
                 url,
                 { data: form },
                 {
                     headers: { "content-type": "application/json" },
                 }
             );
+            if (response.status === 200) {
+                setMessage("ka enn du vil ha der");
+                setForm(blankForm);
+                setValidated(false);
+            } else {
+                setErrormessage("Something happend!");
+            }
         }
         console.log(handleSubmit);
     };
@@ -56,7 +69,7 @@ function ContactForm() {
                         type="text"
                         placeholder="First name"
                         value={form.name}
-                        onChange={(e) => handleOnChange(e, "name")}
+                        onChange={handleOnChange("name")}
                         required
                     />
                     <Form.Control.Feedback type="invalid">
@@ -72,7 +85,7 @@ function ContactForm() {
                         type="text"
                         placeholder="Last Name"
                         value={form.lastname}
-                        onChange={(e) => handleOnChange(e, "lastname")}
+                        onChange={handleOnChange("lastname")}
                         required
                     />
                     <Form.Control.Feedback type="invalid">
@@ -88,7 +101,7 @@ function ContactForm() {
                         type="email"
                         placeholder="name@example.com"
                         value={form.email}
-                        onChange={(e) => handleOnChange(e, "email")}
+                        onChange={handleOnChange("email")}
                         required
                     />
                     <Form.Control.Feedback type="invalid">
@@ -106,7 +119,7 @@ function ContactForm() {
                         placeholder="Leave a message here"
                         style={{ height: "100px" }}
                         value={form.message}
-                        onChange={(e) => handleOnChange(e, "message")}
+                        onChange={handleOnChange("message")}
                         required
                     />
                     <Form.Control.Feedback type="invalid">
@@ -117,8 +130,17 @@ function ContactForm() {
                     Send an enquiry
                 </Button>
             </Form>
+            <div className="message-container">
+                {message && (
+                    <DisplayMessage message={message} messageType={"success"} />
+                )}
+                {errormessage && (
+                    <DisplayMessage
+                        message={errormessage}
+                        messageType={"error"}
+                    />
+                )}
+            </div>
         </>
     );
-}
-
-export default ContactForm;
+};
