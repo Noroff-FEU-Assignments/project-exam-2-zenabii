@@ -10,19 +10,6 @@ function ContactForm() {
 
     const [validated, setValidated] = useState(false);
 
-    const handleValidationOnSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
-        setValidated(true);
-        console.log("submit");
-        console.log(handleSubmit);
-        console.log(setForm);
-    };
-
     const [form, setForm] = useState({
         name: "",
         lastname: "",
@@ -39,25 +26,27 @@ function ContactForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post(
-            url,
-            { data: form },
-            {
-                headers: { "content-type": "application/json" },
-            }
-        );
-        console.log("submit");
+        e.stopPropagation();
+
+        setValidated(true);
+
+        const contactForm = e.currentTarget;
+        console.log(contactForm.checkValidity());
+        if (contactForm.checkValidity() === true) {
+            axios.post(
+                url,
+                { data: form },
+                {
+                    headers: { "content-type": "application/json" },
+                }
+            );
+        }
         console.log(handleSubmit);
-        console.log(form);
     };
 
     return (
         <>
-            <Form
-                onSubmit={(handleSubmit, handleValidationOnSubmit)}
-                noValidate
-                validated={validated}
-            >
+            <Form onSubmit={handleSubmit} noValidate validated={validated}>
                 <FloatingLabel
                     controlId="floatingName"
                     label="name"
