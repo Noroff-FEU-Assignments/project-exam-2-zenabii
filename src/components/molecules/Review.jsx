@@ -15,6 +15,18 @@ export const Review = ({ id, title, img }) => {
 
     const url = baseUrl + "enquiries";
 
+    const [validated, setValidated] = useState(false);
+
+    const handleValidationOnSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        setValidated(true);
+    };
+
     const [form, setForm] = useState({
         hoteldata: {
             id,
@@ -96,7 +108,11 @@ export const Review = ({ id, title, img }) => {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form onSubmit={handleSubmit}>
+                    <Form
+                        onSubmit={(handleSubmit, handleValidationOnSubmit)}
+                        noValidate
+                        validated={validated}
+                    >
                         <FloatingLabel
                             controlId="floatingName"
                             label="name"
@@ -108,6 +124,9 @@ export const Review = ({ id, title, img }) => {
                                 onChange={(e) => handleOnChange(e, "name")}
                                 required
                             />
+                            <Form.Control.Feedback type="invalid">
+                                Please fill in your first name.
+                            </Form.Control.Feedback>
                         </FloatingLabel>
                         <FloatingLabel
                             controlId="floatingLastName"
@@ -120,6 +139,9 @@ export const Review = ({ id, title, img }) => {
                                 onChange={(e) => handleOnChange(e, "lastname")}
                                 required
                             />
+                            <Form.Control.Feedback type="invalid">
+                                Please fill in your last name.
+                            </Form.Control.Feedback>
                         </FloatingLabel>
                         <FloatingLabel
                             controlId="floatingInput"
@@ -132,6 +154,9 @@ export const Review = ({ id, title, img }) => {
                                 onChange={(e) => handleOnChange(e, "email")}
                                 required
                             />
+                            <Form.Control.Feedback type="invalid">
+                                Please provide your email adress.
+                            </Form.Control.Feedback>
                         </FloatingLabel>
                         <FloatingLabel
                             controlId="floatingTextarea2"
@@ -144,7 +169,12 @@ export const Review = ({ id, title, img }) => {
                                 placeholder="Leave a message here"
                                 style={{ height: "100px" }}
                                 onChange={(e) => handleOnChange(e, "message")}
+                                required
                             />
+                            <Form.Control.Feedback type="invalid">
+                                Please fill in information about date and
+                                pricerange you're interested in.
+                            </Form.Control.Feedback>
                         </FloatingLabel>
                         <Button
                             // onClick={handleClose}

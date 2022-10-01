@@ -8,6 +8,21 @@ import { baseUrl } from "../../settings/api";
 function ContactForm() {
     const url = baseUrl + "contacts";
 
+    const [validated, setValidated] = useState(false);
+
+    const handleValidationOnSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        setValidated(true);
+        console.log("submit");
+        console.log(handleSubmit);
+        console.log(setForm);
+    };
+
     const [form, setForm] = useState({
         name: "",
         lastname: "",
@@ -38,7 +53,11 @@ function ContactForm() {
 
     return (
         <>
-            <Form onSubmit={handleSubmit}>
+            <Form
+                onSubmit={(handleSubmit, handleValidationOnSubmit)}
+                noValidate
+                validated={validated}
+            >
                 <FloatingLabel
                     controlId="floatingName"
                     label="name"
@@ -49,7 +68,11 @@ function ContactForm() {
                         placeholder="First name"
                         value={form.name}
                         onChange={(e) => handleOnChange(e, "name")}
+                        required
                     />
+                    <Form.Control.Feedback type="invalid">
+                        Please fill in your first name.
+                    </Form.Control.Feedback>
                 </FloatingLabel>
                 <FloatingLabel
                     controlId="floatingLastName"
@@ -61,7 +84,11 @@ function ContactForm() {
                         placeholder="Last Name"
                         value={form.lastname}
                         onChange={(e) => handleOnChange(e, "lastname")}
+                        required
                     />
+                    <Form.Control.Feedback type="invalid">
+                        Please fill in your last name.
+                    </Form.Control.Feedback>
                 </FloatingLabel>
                 <FloatingLabel
                     controlId="floatingInput"
@@ -73,7 +100,11 @@ function ContactForm() {
                         placeholder="name@example.com"
                         value={form.email}
                         onChange={(e) => handleOnChange(e, "email")}
+                        required
                     />
+                    <Form.Control.Feedback type="invalid">
+                        Please provide with your email adress.
+                    </Form.Control.Feedback>
                 </FloatingLabel>
                 <FloatingLabel
                     controlId="floatingTextarea2"
@@ -87,14 +118,13 @@ function ContactForm() {
                         style={{ height: "100px" }}
                         value={form.message}
                         onChange={(e) => handleOnChange(e, "message")}
+                        required
                     />
+                    <Form.Control.Feedback type="invalid">
+                        Please tell us what we can help you with.
+                    </Form.Control.Feedback>
                 </FloatingLabel>
-                <Button
-                    theme="black"
-                    link="#"
-                    type="submit"
-                    onSubmit={handleSubmit}
-                >
+                <Button theme="black" link="#" type="submit">
                     Send an enquiry
                 </Button>
             </Form>
