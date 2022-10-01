@@ -26,13 +26,13 @@
 .btn:hover,
 .btn-primary:hover,
 .theme-black:hover {
-    background-color: #c0e4e9;
+    background-color: $visionary-blue;
 }
 
 :not(.btn-check) + .btn:hover,
 .btn:first-child:hover {
     color: $solid-blue-700;
-    background-color: #c0e4e9;
+    background-color: $visionary-blue;
     border-color: $solid-blue-700;
 }
 
@@ -60,10 +60,16 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background-color 0.5s ease-out 10ms;
 
     &.theme-white > p {
         color: $solid-white;
     }
+}
+
+.theme-white:hover {
+    background-color: $contrast-green-700;
+    transition: background-color 0.5s ease-out 10ms;
 }
 
 .buttonContainer {

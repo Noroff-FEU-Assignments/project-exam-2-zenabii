@@ -3,6 +3,12 @@
     border: 1px solid $solid-blue-700;
     border-radius: 999px;
     padding: 5px 0px;
+    transition: background-color 0.5s ease-out 10ms;
+    cursor: pointer;
+}
+
+.arrowButton:hover {
+    background-color: $visionary-blue;
 }
 
 .iconWrapper {
@@ -10,4 +16,21 @@
     height: 16px;
     left: 10px;
     margin: 0px 16px;
+}
+
+#animation {
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s ease-in;
+}
+
+#animation:before {
+    transition: 0.6s ease-in;
+}
+
+#animation:hover:before {
+    opacity: 1;
+}
+#animation:hover {
+    transform: translateX(50%);
 }

@@ -13,6 +13,7 @@ export const Button = ({ link, text, theme }) => (
             src={theme === "black" ? svgBlack : svgWhite}
             className="buttonIcon flex-shrink-1 "
             alt="arrow pointing right"
+            id="animation"
         />
     </Link>
 );

@@ -17,3 +17,10 @@
     border-bottom: 1px solid $solid-blue-700;
     margin-bottom: 24px;
 }
+
+.card:hover {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}

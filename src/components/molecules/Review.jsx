@@ -67,6 +67,7 @@ export const Review = ({ id, title, img }) => {
                         src={svgBlack}
                         className="buttonIcon flex-shrink-1 "
                         alt="arrow pointing right"
+                        id="animation"
                     />
                 </Button>
             </div>

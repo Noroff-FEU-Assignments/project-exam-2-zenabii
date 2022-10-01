@@ -2,6 +2,7 @@ h1,
 h2,
 h3 {
     font-family: "Playfair Display", serif;
+    color: $solid-blue-700;
 }
 
 h4 {
@@ -9,6 +10,7 @@ h4 {
     font-weight: 400;
     font-size: 1.125rem;
     margin-bottom: 0px;
+    color: $solid-blue-700;
 }
 
 .font-weight {
@@ -30,6 +32,7 @@ h4 {
 p,
 a {
     font-family: "Roboto", sans-serif;
+    color: $solid-blue-700;
 }
 
 .active {
