@@ -2,7 +2,7 @@ import { fetchContacts } from "../../settings/api";
 import React from "react";
 import { useState, useEffect } from "react";
 
-export const NesMessages = () => {
+export const NewMessages = () => {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [contacts, setContacts] = useState([]);
@@ -28,7 +28,10 @@ export const NesMessages = () => {
         <>
             {results.map((contact) => (
                 <>
-                    <span>{contact.attributes.createdAt}</span>
+                    <div className="dateAdded">
+                        <p className="me-2">Message sent:</p>
+                        {contact.attributes.createdAt}
+                    </div>
                     <div className="enquireBody">
                         <div>
                             <span className="d-flex">

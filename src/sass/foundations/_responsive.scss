@@ -1,8 +1,81 @@
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
+    .editHotels {
+        grid-template-columns: 1fr;
+    }
+
+    .bodyFlex {
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .enquireHotel {
+        width: 250px;
+        object-fit: cover;
+        margin: 16px 16px;
+    }
+
+    .enquireBody {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 32px;
+        padding: 8px;
+    }
+
+    .dateAdded {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hotelContainerEdit {
+        width: 300px;
+        margin: 0;
+        margin-bottom: 32px;
+    }
+
+    .form-check {
+        margin-bottom: 1rem;
+    }
+
+    .addHotels {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .imgHotelEdit {
+        width: 300px;
+    }
     .two-columns-grid {
         grid-template-columns: 1fr;
         width: 100%;
+    }
+
+    .hotelInformation {
+        grid-template-columns: 1fr;
+        width: 95%;
+        margin-top: 56px;
+    }
+
+    .amenitiesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .amenitiesSection {
+        height: 100%;
+        width: 300px;
+    }
+
+    .reverse-flex {
+        justify-content: center;
+    }
+
+    .reviewColumn {
+        grid-template-columns: 1fr;
+    }
+
+    .carouselImg {
+        height: 400px;
     }
 
     .illustration {
@@ -190,12 +263,35 @@
     }
 }
 
-// Medium devices (tablets, 768px and up)
+// Medium devices (small to  1024 and up)
 @media (min-width: 577px) and (max-width: 1024px) {
     .absolute {
         left: 5%;
         top: 20% !important;
     }
+
+    .enquireBody {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 32px;
+        padding: 8px;
+    }
+
+    .dateAdded {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hotelInformation {
+        grid-template-columns: 1fr;
+    }
+
+    .reverse-flex {
+        justify-content: flex-start;
+        margin-top: 24px;
+    }
+
     .two-columns-grid {
         grid-template-columns: 1fr;
         width: 95%;

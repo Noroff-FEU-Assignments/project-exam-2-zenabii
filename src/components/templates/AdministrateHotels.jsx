@@ -102,8 +102,8 @@ export const AdministrateHotels = () => {
 
     return (
         <>
-            <section className="add-products">
-                <h6>add new product</h6>
+            <section className="addHotels">
+                <h2 className="text-align-center">Add new establishments</h2>
                 <form onSubmit={onNewSubmit}>
                     <div className="message-container">{displayMessage}</div>
                     <div className="input-group upload mb-3">
@@ -184,21 +184,20 @@ export const AdministrateHotels = () => {
                     </div>
                 </form>
             </section>
-            <div className="title-section">
-                <hr />
-                <h3>all products</h3>
+            <div className="titleSection">
+                <h3>All hotels</h3>
                 <hr />
             </div>
-            <section className="edit-products">
+            <section className="editHotels">
                 {hotels.map((hotel, index) => (
-                    <div className="product-container-edit" key={hotel.id}>
-                        <Link to={`/hotels/${hotel.id}`}>
+                    <div className="hotelContainerEdit" key={hotel.id}>
+                        <Link to={"/hotel/" + hotel.id}>
                             <img
                                 src={
                                     hotel.attributes.images.data[0].attributes
                                         .url
                                 }
-                                className="product-img-edit"
+                                className="imgHotelEdit"
                                 alt={
                                     hotel.attributes.images.data[0].attributes
                                         .url
@@ -294,7 +293,7 @@ export const AdministrateHotels = () => {
                                     set as featured product
                                 </label>
                             </div>
-                            <div className="d-grid gap-2 d-md-flex justify-content-md-center">
+                            <div className="d-flex justify-content-evenly mt-3 mb-2">
                                 <button
                                     type="submit"
                                     className="btn btn-primary"

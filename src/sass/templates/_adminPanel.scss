@@ -1,3 +1,34 @@
 .adminPanel {
-    margin-top: 400px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.editHotels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.imgHotelEdit {
+    width: 350px;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+.hotelContainerEdit {
+    margin: 8px;
+}
+
+.titleSection {
+    text-align: center;
+    margin-top: 64px;
+}
+
+.addHotels {
+    margin-top: 48px;
+}
+
+.ExtremeMarginTop {
+    margin-top: 300px;
 }

@@ -28,8 +28,11 @@ export const Enquires = () => {
         <>
             {results.map((enquiry) => (
                 <>
-                    <span>Enquire request: {enquiry.attributes.createdAt}</span>
-                    <div className="enquireBody">
+                    <div className="dateAdded">
+                        <p className="me-2">Message sent:</p>
+                        {enquiry.attributes.createdAt}
+                    </div>
+                    <div className="enquireBody bodyFlex" key={enquiry.id}>
                         <div>
                             <img
                                 src={enquiry.attributes.hoteldata.img}
@@ -37,7 +40,7 @@ export const Enquires = () => {
                                 className="enquireHotel"
                             />
                         </div>
-                        <div>
+                        <div key={enquiry.id}>
                             <span className="d-flex">
                                 <p className="me-2">Hotel:</p>{" "}
                                 <p>{enquiry.attributes.hoteldata.title}</p>
