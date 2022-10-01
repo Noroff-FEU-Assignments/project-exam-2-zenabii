@@ -42,6 +42,10 @@ export const CardGroup = () => {
                             img={hotel.attributes.images.data[0].attributes.url}
                             title={hotel.attributes.title}
                             link={"/hotel/" + hotel.id}
+                            alternativetext={
+                                hotel.attributes.images.data[0].attributes
+                                    .alternativeText
+                            }
                         />
                     ))}
                 </div>

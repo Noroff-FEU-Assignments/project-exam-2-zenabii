@@ -200,9 +200,9 @@ export const AdministrateHotels = () => {
                                 className="imgHotelEdit"
                                 alt={
                                     hotel.attributes.images.data[0].attributes
-                                        .url
+                                        .alternativeText
                                         ? hotel.attributes.images.data[0]
-                                              .attributes.url
+                                              .attributes.alternativeText
                                         : "picture of " + hotel.title
                                 }
                             />

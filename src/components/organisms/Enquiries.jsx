@@ -36,7 +36,7 @@ export const Enquires = () => {
                         <div>
                             <img
                                 src={enquiry.attributes.hoteldata.img}
-                                alt="illustration"
+                                alt="The requested hotel in this enquiry"
                                 className="enquireHotel"
                             />
                         </div>
