@@ -6,7 +6,6 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { baseUrl } from "../../settings/api";
 import axios from "axios";
 import { DisplayMessage } from "../atoms/DisplayMessage";
-import Spinner from "react-bootstrap/Spinner";
 
 export const Review = ({ id, title, img }) => {
     const url = baseUrl + "enquiries";
@@ -15,7 +14,6 @@ export const Review = ({ id, title, img }) => {
     const [validated, setValidated] = useState(false);
     const [message, setMessage] = useState("");
     const [errormessage, setErrormessage] = useState("");
-    const [loading, setLoading] = useState(true);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);

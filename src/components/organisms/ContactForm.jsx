@@ -4,12 +4,10 @@ import { Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../../settings/api";
-import Spinner from "react-bootstrap/Spinner";
 import { DisplayMessage } from "../atoms/DisplayMessage";
 
 export const ContactForm = () => {
     const url = baseUrl + "contacts";
-    const [loading, setLoading] = useState(true);
     const [validated, setValidated] = useState(false);
     const [message, setMessage] = useState("");
     const [errormessage, setErrormessage] = useState("");
