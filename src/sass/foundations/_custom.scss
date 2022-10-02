@@ -45,3 +45,8 @@ body {
 .nav-link:hover {
     color: $contrast-green-700;
 }
+
+.offcanvasStyling {
+    display: flex;
+    flex-direction: column;
+}

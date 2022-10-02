@@ -95,9 +95,12 @@ function CenteredNavbar({ user, logout }) {
             </div>
             <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                    <Offcanvas.Title>Holidaze meny</Offcanvas.Title>
                 </Offcanvas.Header>
-                <Nav className="me-auto float-right" user={user}>
+                <Nav
+                    className="me-auto float-right offcanvasStyling"
+                    user={user}
+                >
                     <NavLink
                         className={({ isActive }) =>
                             "uppercase" + (isActive ? " active" : "")
