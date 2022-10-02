@@ -12,3 +12,7 @@ Use npm install to get all the packages necessary to get started with this proje
 Big thanks to the teachers who responded fast when I had questions about the brief.
 Thanks to Sophie for helping me out with the strapi 500 response headache.
 Thanks to Maria Holm for rubberducking when necessary.
+
+<3 <3 <3 <3 
+It's hard to believe we're almost done!
+Thanks for two very humbling years!
