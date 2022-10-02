@@ -57,7 +57,12 @@ export const ContactForm = () => {
 
     return (
         <>
-            <Form onSubmit={handleSubmit} noValidate validated={validated}>
+            <Form
+                onSubmit={handleSubmit}
+                noValidate
+                validated={validated}
+                className="contactFormWidth"
+            >
                 <FloatingLabel
                     controlId="floatingName"
                     label="name"

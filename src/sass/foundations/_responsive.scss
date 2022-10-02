@@ -270,6 +270,10 @@
         top: 20% !important;
     }
 
+    .contactFormWidth {
+        width: 500px;
+    }
+
     .enquireBody {
         width: 80%;
         margin: 0 auto;
@@ -306,7 +310,7 @@
     }
 
     .cardGroup {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .ctaBannerPosition {

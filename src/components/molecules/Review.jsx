@@ -66,10 +66,6 @@ export const Review = ({ id, title, img }) => {
         }
     };
 
-    if (loading) {
-        return <Spinner />;
-    }
-
     return (
         <>
             <div className="reviewColumn">
