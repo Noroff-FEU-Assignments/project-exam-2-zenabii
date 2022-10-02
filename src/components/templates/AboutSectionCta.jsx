@@ -1,5 +1,4 @@
 import { TitleText } from "../molecules/TitleText";
-import { Paragraph } from "../atoms/Paragraph";
 
 const image = require("../../images/vehicles-mountains-lake.jpg");
 

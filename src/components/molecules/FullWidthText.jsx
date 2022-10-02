@@ -1,5 +1,4 @@
 import { Paragraph } from "../atoms/Paragraph";
-import { Button } from "../atoms/Button";
 
 export const FullWidthText = ({
     subject,
