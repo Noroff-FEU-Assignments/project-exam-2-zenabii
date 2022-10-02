@@ -4,8 +4,8 @@ import React from "react";
 function HotelCarousel({ slides }) {
     return (
         <Carousel variant="dark" interval={null} indicators={false}>
-            {slides.map((slide) => (
-                <Carousel.Item>
+            {slides.map((slide, index) => (
+                <Carousel.Item key={index}>
                     <img
                         className="d-block carouselImg"
                         src={slide.url}

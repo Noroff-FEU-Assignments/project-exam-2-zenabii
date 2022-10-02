@@ -15,9 +15,9 @@ export const AboutSection = () => (
                 Link="/contactus"
                 theme="blue"
                 subject="Who are we"
-                title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucib us massa at auctor lacinia. Proin porta a orci in aliquet. Nam a nunc quam. Maecenas lacinia facilisis bibendum. Quam Suspendisse potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et orci. "
-                secondParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucib us massa at auctor lacinia. Proin porta a orci in aliquet. Nam a nunc quam. Maecenas lacinia facilisis bibendum. Quam Suspendisse potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et orci. "
+                title="Holidaze is the first and best choice when planning a trip to Iceland"
+                paragraph="Holidaze tours will take you to the hidden gems of Iceland’s capital and show you what this charming city has to offer. Delicious food, refreshing drinks, and interesting stories will follow you everywhere you go in Reykjavik. Bursting with life and culture, Reykjavik is one of the most visited cities in Europe, for good reason.r"
+                secondParagraph="Choose from the best Iceland vacation packages - here you will find Iceland honeymoon packages, the famous Blue Lagoon Iceland packages, or Iceland hiking tour packages."
             />
         </div>
     </section>

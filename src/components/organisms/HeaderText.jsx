@@ -12,8 +12,7 @@ export const HeaderText = () => (
                 theme="blue"
                 subject="Who are we"
                 title="We tailor the best experience"
-                paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            faucib us massa at auctor lacinia."
+                paragraph="Our passion is to provide you the best travel experience in Iceland. We will go far to fulfill your needs!"
             />
         </div>
     </section>

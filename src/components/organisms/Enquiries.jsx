@@ -28,10 +28,6 @@ export const Enquires = () => {
         <>
             {results.map((enquiry) => (
                 <React.Fragment key={enquiry.id}>
-                    <div className="dateAdded">
-                        <p className="me-2">Message sent:</p>
-                        {enquiry.attributes.createdAt}
-                    </div>
                     <div className="enquireBody bodyFlex">
                         <div>
                             <img

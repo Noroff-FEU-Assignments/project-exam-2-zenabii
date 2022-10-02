@@ -16,11 +16,9 @@ export const AboutSectionCta = () => (
             <TitleText
                 theme="blue"
                 subject="Explore now"
-                title="Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit. 
-                Proin porta a orci in aliquet. "
-                paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucib us massa at auctor lacinia. Proin porta a orci in aliquet. Nam a nunc quam. Maecenas lacinia facilisis bibendum. Quam Suspendisse potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et orci.."
-                secondParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucib us massa at auctor lacinia. Proin porta a orci in aliquet. Nam a nunc quam. Maecenas lacinia facilisis bibendum. Quam Suspendisse potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et orci. "
+                title="Guided sightseeing tours in Iceland"
+                paragraph="Holidaze offers a wide range of sightseeing tours of Iceland, of various length and difficulty levels. Whether you would explore the areas around Reykjavik or go around the whole island, our day tours or multiday tours will take you on an easy and safe journey."
+                secondParagraph="Lava cave tours in Iceland prove that the country is full of surprises — both on the ground and underneath it. Huge lava fields on the surface cover miles and miles of underground tunnels."
             />
         </div>
     </section>

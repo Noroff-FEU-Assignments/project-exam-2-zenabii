@@ -31,10 +31,6 @@ export const NewMessages = () => {
 
     return results.map((contact) => (
         <React.Fragment key={contact.id}>
-            <div className="dateAdded">
-                <p className="me-2">Message sent:</p>
-                {contact.attributes.createdAt}
-            </div>
             <div className="enquireBody">
                 <div>
                     <span className="d-flex">

@@ -61,7 +61,9 @@ export const AdministrateHotels = () => {
     const onNewSubmit = (e) => {
         e.preventDefault();
         if (!validateHotelForm(newHotel)) {
-            return setDisplayErrorMessage("oops! Something happend!");
+            return setDisplayErrorMessage(
+                "Please fill out all the fields below."
+            );
         }
 
         setLoading(true);
