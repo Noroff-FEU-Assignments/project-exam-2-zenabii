@@ -6,6 +6,7 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { baseUrl } from "../../settings/api";
 import axios from "axios";
 import { DisplayMessage } from "../atoms/DisplayMessage";
+import Spinner from "react-bootstrap/Spinner";
 
 export const Review = ({ id, title, img }) => {
     const url = baseUrl + "enquiries";
@@ -64,6 +65,10 @@ export const Review = ({ id, title, img }) => {
             }
         }
     };
+
+    if (loading) {
+        return <Spinner />;
+    }
 
     return (
         <>

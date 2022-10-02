@@ -1,4 +1,3 @@
-import axios from "axios";
 import { setItem, getItem } from "./store";
 
 export const baseUrl = "https://strapi-api-holidaze-maria.herokuapp.com/api/";
