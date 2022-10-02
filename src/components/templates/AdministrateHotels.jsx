@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, React, useRef } from "react";
 import {
     fetchHotels,
     createHotel,
@@ -9,6 +8,7 @@ import {
 } from "../../settings/api";
 import { DisplayMessage } from "../atoms/DisplayMessage";
 import { Button } from "react-bootstrap";
+import Spinner from "react-bootstrap/Spinner";
 
 export const AdministrateHotels = () => {
     const blankHotel = {
@@ -20,7 +20,12 @@ export const AdministrateHotels = () => {
 
     const [hotels, setHotels] = useState([]);
     const [newHotel, setNewHotel] = useState(blankHotel);
-    const [displayMessage, setDisplayMessage] = useState();
+    const [displayMessage, setDisplayMessage] = useState("");
+    const [displayErrorMessage, setDisplayErrorMessage] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [editMessage, setEditMessage] = useState("");
+    const [editErrorMessage, setEditErrorMessage] = useState("");
+    const messageRef = useRef();
 
     const validateHotelForm = (hotel) =>
         hotel.title.length === 0 ||
@@ -35,7 +40,6 @@ export const AdministrateHotels = () => {
             ...newHotel,
             [key]: value,
         });
-        setDisplayMessage(null);
     };
 
     const updateHotelProperty = (index, key, value) => {
@@ -45,7 +49,10 @@ export const AdministrateHotels = () => {
                     ? hotel
                     : {
                           ...hotel,
-                          [key]: value,
+                          attributes: {
+                              ...hotel.attributes,
+                              [key]: value,
+                          },
                       }
             )
         );
@@ -54,25 +61,18 @@ export const AdministrateHotels = () => {
     const onNewSubmit = (e) => {
         e.preventDefault();
         if (!validateHotelForm(newHotel)) {
-            return setDisplayMessage(
-                <DisplayMessage
-                    message={"Please supply proper values"}
-                    messageType={"warning"}
-                />
-            );
+            return setDisplayErrorMessage("oops! Something happend!");
         }
+
+        setLoading(true);
 
         // Create, then refresh products, clean up form and set success message.
         createHotel(e.target).then(() => {
             fetchHotels().then((res) => setHotels(res));
             setNewHotel(blankHotel);
             e.target.reset();
-            setDisplayMessage(
-                <DisplayMessage
-                    message={"You have successfully added a new product!"}
-                    messageType={"success"}
-                />
-            );
+            setDisplayMessage("Your new establishment has been created!");
+            setLoading(false);
         });
     };
 
@@ -84,6 +84,8 @@ export const AdministrateHotels = () => {
         // Update, then refresh products.
         updateHotel(hotel.id, e.target).then(() => {
             fetchHotels().then((res) => setHotels(res));
+            setEditMessage("Your establishment has been updated!");
+            messageRef.current.scrollIntoView();
         });
     };
 
@@ -97,7 +99,10 @@ export const AdministrateHotels = () => {
     };
 
     useEffect(() => {
-        fetchHotels().then((res) => setHotels(res));
+        fetchHotels().then((res) => {
+            setHotels(res);
+            console.log(res);
+        });
     }, []);
 
     return (
@@ -105,7 +110,21 @@ export const AdministrateHotels = () => {
             <section className="addHotels">
                 <h2 className="text-align-center">Add new establishments</h2>
                 <form onSubmit={onNewSubmit}>
-                    <div className="message-container">{displayMessage}</div>
+                    <div className="message-container">
+                        {displayMessage && (
+                            <DisplayMessage
+                                message={displayMessage}
+                                messageType={"success"}
+                            />
+                        )}
+                        {displayErrorMessage && (
+                            <DisplayMessage
+                                message={displayErrorMessage}
+                                messageType={"error"}
+                            />
+                        )}
+                    </div>
+                    <p>You can select multiple images!</p>
                     <div className="input-group upload mb-3">
                         <input
                             name="images"
@@ -179,8 +198,19 @@ export const AdministrateHotels = () => {
                             type="submit"
                             className="btn btn-primary"
                             onSubmit={onNewSubmit}
+                            disabled={loading}
                         >
-                            upload
+                            Upload
+                            {loading && (
+                                <Spinner
+                                    as="span"
+                                    role="status"
+                                    aria-hidden="true"
+                                    animation="border"
+                                    size="sm"
+                                    className="ms-2"
+                                />
+                            )}
                         </Button>
                     </div>
                 </form>
@@ -188,6 +218,20 @@ export const AdministrateHotels = () => {
             <div className="titleSection">
                 <h3>All hotels</h3>
                 <hr />
+                <div className="message-container" ref={messageRef}>
+                    {editMessage && (
+                        <DisplayMessage
+                            message={editMessage}
+                            messageType={"success"}
+                        />
+                    )}
+                    {editErrorMessage && (
+                        <DisplayMessage
+                            message={editErrorMessage}
+                            messageType={"error"}
+                        />
+                    )}
+                </div>
             </div>
             <section className="editHotels">
                 {hotels.map((hotel, index) => (
@@ -227,8 +271,8 @@ export const AdministrateHotels = () => {
                                     name="title"
                                     type="text"
                                     className="form-control edit"
-                                    placeholder="title"
-                                    value={hotel.title}
+                                    placeholder={hotel.attributes.title}
+                                    value={hotel.attributes.title}
                                     onChange={(e) =>
                                         updateHotelProperty(
                                             index,
@@ -243,8 +287,8 @@ export const AdministrateHotels = () => {
                                     name="price"
                                     type="number"
                                     className="form-control edit"
-                                    placeholder="price"
-                                    value={hotel.price}
+                                    placeholder={hotel.attributes.price}
+                                    value={hotel.attributes.price ?? 0}
                                     onChange={(e) =>
                                         updateHotelProperty(
                                             index,
@@ -258,8 +302,8 @@ export const AdministrateHotels = () => {
                                 <textarea
                                     name="information"
                                     className="form-control edit"
-                                    placeholder="information"
-                                    value={hotel.information}
+                                    placeholder={hotel.attributes.information}
+                                    value={hotel.attributes.information}
                                     onChange={(e) =>
                                         updateHotelProperty(
                                             index,
@@ -276,8 +320,8 @@ export const AdministrateHotels = () => {
                                     type="checkbox"
                                     id={"flexCheckDefault-" + hotel.id}
                                     checked={
-                                        hotel.featured !== null
-                                            ? hotel.featured
+                                        hotel.attributes.featured !== null
+                                            ? hotel.attributes.featured
                                             : false
                                     }
                                     onChange={(e) =>

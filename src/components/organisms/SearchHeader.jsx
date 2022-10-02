@@ -8,8 +8,7 @@ export const SearchHeader = () => (
             <Heading
                 theme="blue"
                 subject="Find your stay"
-                title="Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit. Vivamus faucib us massa at auctor "
+                title="Book your next trip with one of our many offers here at Holidaze"
             />
             <Paragraph paragraph="We make it easy for you!" />
             <SearchInput />

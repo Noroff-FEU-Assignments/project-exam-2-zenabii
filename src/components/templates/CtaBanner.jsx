@@ -14,7 +14,7 @@ export const CtaBanner = () => (
             <TitleText
                 theme="white"
                 subject="More about our offers"
-                title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                title="We do not only offer hotels, explore Iceland through us"
             />
             <Button link="FindYourStay" theme="white" text="Send an enquiry" />
         </div>

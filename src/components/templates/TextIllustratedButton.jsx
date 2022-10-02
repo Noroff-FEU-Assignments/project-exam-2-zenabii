@@ -16,12 +16,8 @@ export const TextIllustratedButton = () => (
             <TitleText
                 theme="blue"
                 subject="Explore now"
-                title="Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit. 
-                Proin porta a orci in aliquet. "
-                paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            faucib us massa at auctor lacinia. Proin porta a orci.
-            orci."
+                title="Holidaze is a tailored website for you who wishes to get the most out of your stay"
+                paragraph="If you are unsure what you should explore first while you're in Iceland you can send us an email and we'll tailor your trip for you."
             />
             <Button theme="black" link="FindYourStay" text="Send an enquiry" />
         </div>

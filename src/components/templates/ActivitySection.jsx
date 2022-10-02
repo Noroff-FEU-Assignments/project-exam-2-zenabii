@@ -7,17 +7,9 @@ export const ActivitySection = () => (
         <TitleTextLarge
             theme="blue"
             subject="introduction"
-            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            faucib us massa at auctor lacinia. Proin porta a orci in aliquet.
-            Nam a nunc quam. Maecenas lacinia facilisis bibendum. Suspendisse
-            potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et
-            orci."
-            secondParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            faucib us massa at auctor lacinia. Proin porta a orci in aliquet.
-            Nam a nunc quam. Maecenas lacinia facilisis bibendum. Suspendisse
-            potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et
-            orci."
+            title="Iceland is a rich country with incredible nature and wildlife"
+            paragraph="Activities in Iceland vary from adrenaline-filled adventures to low-key museum visits. They include whale watching in Dalvik, snorkeling in the world’s clearest waters, hiking in the most remote destinations, and hunting the Northern Lights."
+            secondParagraph="Join one of our Northern Lights tours in Iceland to experience this majestic natural phenomenon for yourself. The Northern Lights have fascinated onlookers for centuries. I"
         />
         <div className="illustraton-part-right">
             <img

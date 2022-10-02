@@ -7,12 +7,10 @@ export const TextIllustrated = () => (
         <TitleText
             theme="blue"
             subject="introduction"
-            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            faucib us massa at auctor lacinia. Proin porta a orci in aliquet.
-            Nam a nunc quam. Maecenas lacinia facilisis bibendum. Suspendisse
-            potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et
-            orci."
+            title="Holidaze is the best option for you who wishes to travel and explore"
+            paragraph="Here at our website you can read more about different activities available
+            in Iceland. Iceland is a rich country that has so much to offer for anyone out there!
+            "
         />
         <div className="illustraton-part-right">
             <img

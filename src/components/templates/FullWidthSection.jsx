@@ -12,17 +12,11 @@ export const FullWidthSection = () => (
         <FullWidthText
             theme="blue"
             subject="More about our offers"
-            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            faucib us massa at auctor lacinia. Proin porta a orci in aliquet.
-            Nam a nunc quam. Maecenas lacinia facilisis bibendum. Suspendisse
-            potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et
-            orci"
-            secondParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            faucib us massa at auctor lacinia. Proin porta a orci in aliquet.
-            Nam a nunc quam. Maecenas lacinia facilisis bibendum. Suspendisse
-            potenti. Vivamus erat ligula, iaculis quis pulvinar id, imperdiet et
-            orci"
+            title="Guided tours to Iceland's blue lagoon geothermal soa"
+            paragraph="The Blue Lagoon is one of the most popular tourist attractions in Iceland. The blue mineral-rich water leaves your skin soft and smooth after a relaxing visit.
+
+            Shortly after its formation, people began to bathe in the lagoon that proved to have a positive effect on psoriasis and other skin diseases."
+            secondParagraph="The Blue Lagoon is located only 20km from Keflavik International Airport, making it very convenient to visit on your way to or from the airport. Check out our Blue Lagoon Tours."
         />
     </section>
 );

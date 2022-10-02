@@ -8,8 +8,9 @@ export const QnaCta = () => (
         </div>
         <div className="quoteWidth">
             <p className="white-color margin-bottom">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                faucib us massa at auctor lacinia.
+                It's not always easy to know what you're missing out on when
+                travelling to a new country. Send us an email and we will
+                personally tailor your trip to your liking.
             </p>
             <Button theme="white" link="/ContactUs" text="Send us an email" />
         </div>
