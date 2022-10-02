@@ -1,8 +1,7 @@
 import axios from "axios";
 import { setItem, getItem } from "./store";
 
-// export const baseUrl = "https://strapi-api-holidaze-maria.herokuapp.com/api/";
-export const baseUrl = "http://localhost:1337/api/";
+export const baseUrl = "https://strapi-api-holidaze-maria.herokuapp.com/api/";
 
 export const fetchHotels = async () => {
     const url = baseUrl + "hotels?populate=*";
