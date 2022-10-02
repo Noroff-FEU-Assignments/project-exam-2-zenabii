@@ -103,7 +103,6 @@ export const AdministrateHotels = () => {
     useEffect(() => {
         fetchHotels().then((res) => {
             setHotels(res);
-            console.log(res);
         });
     }, []);
 

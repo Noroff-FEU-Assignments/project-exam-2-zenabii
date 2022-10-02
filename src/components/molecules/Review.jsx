@@ -47,7 +47,6 @@ export const Review = ({ id, title, img }) => {
         setValidated(true);
 
         const enquiryForm = e.currentTarget;
-        console.log(enquiryForm.checkValidity());
         if (enquiryForm.checkValidity() === true) {
             const response = await axios.post(
                 url,

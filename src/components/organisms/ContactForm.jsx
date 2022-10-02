@@ -37,7 +37,6 @@ export const ContactForm = () => {
         setValidated(true);
 
         const contactForm = e.currentTarget;
-        console.log(contactForm.checkValidity());
         if (contactForm.checkValidity() === true) {
             const response = await axios.post(
                 url,

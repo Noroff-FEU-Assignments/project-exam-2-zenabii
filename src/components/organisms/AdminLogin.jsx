@@ -17,8 +17,6 @@ export const AdminLogin = ({ login }) => {
         e.preventDefault();
         setErrorMsg("");
 
-        console.log(onSubmit);
-
         authenticate(username, password).then((res) => {
             if (res.error) {
                 setErrorMsg("Invalid login credentials.");

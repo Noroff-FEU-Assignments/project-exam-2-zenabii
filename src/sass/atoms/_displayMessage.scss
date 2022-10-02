@@ -2,6 +2,7 @@
     border: 1px solid lightgrey;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.01);
+    border-radius: 8px;
 }
 
 .message.error {
@@ -17,9 +18,9 @@
 }
 
 .message.success {
-    border-color: green;
+    border-color: $visionary-blue;
     color: white;
-    background: green;
+    background: $contrast-green-700;
 }
 
 .message-container {

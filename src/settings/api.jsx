@@ -116,8 +116,6 @@ const getFormData = (form) => {
 export const createHotel = async (form) => {
     const url = baseUrl + "hotels";
 
-    console.log(getFormData(form));
-
     const token = getItem("token");
     const options = {
         method: "POST",
@@ -126,7 +124,6 @@ export const createHotel = async (form) => {
             Authorization: `Bearer ${token}`,
         },
     };
-    console.log({ token });
     try {
         const response = await fetch(url, options);
         const result = await response.json();
