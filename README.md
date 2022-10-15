@@ -10,6 +10,7 @@ This Holidaze project is a tourist website where the user can book hotels and se
 - This is a react app project
 - The website is about Iceland instead of Bergen
 - The user can send enquiries about hotels and activities through the website
+- If interested in more about the design, please read the styleguide.
 
 ## Built With
 
@@ -62,6 +63,6 @@ Password: Pass1234
 
 ## Acknowledgments
 
-Big thanks to the teachers who responded fast when I had questions about the brief.
-Thanks to Sophie for helping me out with the strapi 500 response headache.
-Thanks to Maria Holm for rubberducking when necessary.
+- Big thanks to the teachers who responded fast when I had questions about the brief.
+- Thanks to Sophie for helping me out with the strapi 500 response headache.
+- Thanks to Maria Holm for rubberducking when necessary.
